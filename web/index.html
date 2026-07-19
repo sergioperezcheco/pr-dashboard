@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PR Dashboard · sergioperezcheco</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --muted: #8b949e;
+      --accent: #67c1a0;
+      --accent-hover: #7fd1b0;
+      --green: #3fb950;
+      --red: #f85149;
+      --yellow: #d29922;
+      --blue: #58a6ff;
+      --purple: #bc8cff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", Helvetica, Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .stat-num {
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1.1;
+      font-variant-numeric: tabular-nums;
+    }
+    .stat-label {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-top: 4px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .badge-open { background: rgba(63,185,80,0.15); color: var(--green); }
+    .badge-merged { background: rgba(188,140,255,0.15); color: var(--purple); }
+    .badge-closed { background: rgba(248,81,73,0.15); color: var(--red); }
+    .badge-high { background: rgba(248,81,73,0.2); color: var(--red); border: 1px solid rgba(248,81,73,0.3); }
+    .badge-medium { background: rgba(210,153,34,0.2); color: var(--yellow); border: 1px solid rgba(210,153,34,0.3); }
+    .badge-low { background: rgba(139,148,158,0.15); color: var(--muted); }
+    .pr-row {
+      display: grid;
+      grid-template-columns: 110px 1fr auto;
+      gap: 12px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      align-items: center;
+      transition: background 0.15s;
+    }
+    .pr-row:hover { background: rgba(255,255,255,0.03); }
+    .pr-title { color: var(--text); text-decoration: none; font-weight: 500; }
+    .pr-title:hover { color: var(--accent); }
+    .pr-meta { color: var(--muted); font-size: 0.8rem; margin-top: 2px; }
+    .repo-pill {
+      display: inline-block;
+      padding: 2px 8px;
+      background: rgba(88,166,255,0.1);
+      color: var(--blue);
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .repo-pill:hover { background: rgba(88,166,255,0.2); }
+    .filter-btn {
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.15s;
+    }
+    .filter-btn:hover { border-color: var(--accent); color: var(--text); }
+    .filter-btn.active {
+      background: var(--accent);
+      color: var(--bg);
+      border-color: var(--accent);
+    }
+    .progress-bar {
+      height: 6px;
+      background: var(--border);
+      border-radius: 3px;
+      overflow: hidden;
+      display: flex;
+    }
+    .progress-bar > div { height: 100%; }
+    .scroll-area { max-height: 600px; overflow-y: auto; }
+    .scroll-area::-webkit-scrollbar { width: 6px; }
+    .scroll-area::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    .reason-chip {
+      display: inline-block;
+      padding: 2px 8px;
+      margin: 2px 2px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+    .pulse-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 6px;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    .pulse-high { background: var(--red); }
+    .pulse-medium { background: var(--yellow); }
+    h1, h2, h3 { color: #fff; }
+    a { color: var(--accent); }
+    .fade-in { animation: fadeIn 0.3s; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .mono { font-family: "SF Mono", "Fira Code", monospace; }
+  </style>
+</head>
+<body>
+
+<div class="max-w-7xl mx-auto px-4 py-6">
+
+  <!-- Header -->
+  <header class="flex items-center justify-between mb-8 flex-wrap gap-3">
+    <div>
+      <h1 class="text-2xl font-bold flex items-center gap-2">
+        <span style="color: var(--accent)">⬡</span> PR Dashboard
+      </h1>
+      <p class="text-sm mt-1" style="color: var(--muted)">
+        <a href="https://github.com/sergioperezcheco" target="_blank" class="hover:underline">@sergioperezcheco</a>
+        · 开源贡献监控 · <span id="last-update" class="mono">—</span>
+      </p>
+    </div>
+    <div id="refresh-indicator" class="text-sm" style="color: var(--muted)"></div>
+  </header>
+
+  <!-- KPI 卡片 -->
+  <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-6" id="kpi-cards">
+    <!-- 动态生成 -->
+  </div>
+
+  <!-- 需要action告警条 -->
+  <div id="action-alert" class="card mb-6 hidden fade-in" style="border-color: rgba(248,81,73,0.4)">
+    <div class="flex items-center gap-3 mb-3">
+      <span class="pulse-dot pulse-high"></span>
+      <h2 class="text-lg font-semibold">需要 Action</h2>
+      <span id="action-count" class="badge badge-high">0</span>
+    </div>
+    <div id="action-list" class="space-y-2"></div>
+  </div>
+
+  <!-- 图表区 -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+    <div class="card">
+      <h3 class="text-sm font-semibold mb-3" style="color: var(--muted)">PR 时间趋势（按天）</h3>
+      <canvas id="chart-timeline" height="200"></canvas>
+    </div>
+    <div class="card">
+      <h3 class="text-sm font-semibold mb-3" style="color: var(--muted)">状态分布</h3>
+      <canvas id="chart-states" height="200"></canvas>
+    </div>
+  </div>
+
+  <!-- 仓库热力 -->
+  <div class="card mb-6">
+    <h3 class="text-sm font-semibold mb-3" style="color: var(--muted)">按仓库分布</h3>
+    <div id="repo-bars" class="space-y-3"></div>
+  </div>
+
+  <!-- PR 列表 -->
+  <div class="card">
+    <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
+      <h2 class="text-lg font-semibold">PR 列表</h2>
+      <div class="flex gap-2 flex-wrap" id="filters">
+        <button class="filter-btn active" data-filter="all">全部</button>
+        <button class="filter-btn" data-filter="open">Open</button>
+        <button class="filter-btn" data-filter="needs_action">⚠️ 需处理</button>
+        <button class="filter-btn" data-filter="merged">Merged</button>
+        <button class="filter-btn" data-filter="closed">Closed</button>
+      </div>
+    </div>
+    <input id="search" type="text" placeholder="搜索标题、仓库..." 
+           class="w-full mb-3 px-3 py-2 rounded-lg outline-none"
+           style="background: var(--bg); border: 1px solid var(--border); color: var(--text);">
+    <div id="pr-list" class="scroll-area"></div>
+    <div id="empty-state" class="hidden text-center py-8" style="color: var(--muted)">
+      没有匹配的 PR
+    </div>
+  </div>
+
+  <footer class="text-center mt-8 mb-4 text-xs" style="color: var(--muted)">
+    自动更新 · 数据来自 GitHub API · 
+    <a href="https://github.com/sergioperezcheco/pr-dashboard" target="_blank" class="hover:underline">Source</a>
+  </footer>
+
+</div>
+
+<script>
+let DATA = null;
+let currentFilter = 'all';
+let searchTerm = '';
+let charts = {};
+
+// ===== 数据加载 =====
+async function loadData() {
+  try {
+    // 加时间戳防缓存
+    const resp = await fetch(`data.json?t=${Date.now()}`);
+    DATA = await resp.json();
+    render();
+  } catch (e) {
+    document.getElementById('refresh-indicator').textContent = '⚠ 加载失败';
+    console.error(e);
+  }
+}
+
+// ===== 渲染 =====
+function render() {
+  renderHeader();
+  renderKPIs();
+  renderActionAlert();
+  renderRepoBars();
+  renderPRList();
+  renderCharts();
+}
+
+function renderHeader() {
+  const dt = new Date(DATA.generated_at);
+  const ago = timeAgo(dt);
+  document.getElementById('last-update').textContent = `${dt.toLocaleString('zh-CN')} (${ago})`;
+}
+
+function timeAgo(date) {
+  const sec = Math.floor((Date.now() - date.getTime()) / 1000);
+  if (sec < 60) return `${sec}秒前`;
+  if (sec < 3600) return `${Math.floor(sec/60)}分钟前`;
+  if (sec < 86400) return `${Math.floor(sec/3600)}小时前`;
+  return `${Math.floor(sec/86400)}天前`;
+}
+
+function renderKPIs() {
+  const s = DATA.summary;
+  const cards = [
+    { label: '总 PR', value: s.total, color: '#fff' },
+    { label: 'Open', value: s.open, color: 'var(--green)' },
+    { label: 'Merged', value: s.merged, color: 'var(--purple)' },
+    { label: '合并率', value: s.merge_rate + '%', color: s.merge_rate > 10 ? 'var(--green)' : 'var(--yellow)' },
+    { label: '需处理', value: s.needs_action_count, color: s.needs_action_count > 0 ? 'var(--red)' : 'var(--muted)' },
+    { label: '仓库数', value: s.repo_count, color: 'var(--blue)' },
+  ];
+  document.getElementById('kpi-cards').innerHTML = cards.map(c => `
+    <div class="card">
+      <div class="stat-num" style="color: ${c.color}">${c.value}</div>
+      <div class="stat-label">${c.label}</div>
+    </div>
+  `).join('');
+}
+
+function renderActionAlert() {
+  const actionPRs = DATA.prs.filter(p => p.needs_action && p.state === 'open');
+  const alertEl = document.getElementById('action-alert');
+  const listEl = document.getElementById('action-list');
+  const countEl = document.getElementById('action-count');
+
+  if (actionPRs.length === 0) {
+    alertEl.classList.add('hidden');
+    return;
+  }
+  alertEl.classList.remove('hidden');
+  countEl.textContent = actionPRs.length;
+
+  // 按优先级排序
+  const order = { high: 0, medium: 1, low: 2 };
+  actionPRs.sort((a, b) => (order[a.action_priority] || 3) - (order[b.action_priority] || 3));
+
+  listEl.innerHTML = actionPRs.map(p => {
+    const priorityClass = p.action_priority === 'high' ? 'badge-high' : 
+                          p.action_priority === 'medium' ? 'badge-medium' : 'badge-low';
+    const dotClass = p.action_priority === 'high' ? 'pulse-high' : 'pulse-medium';
+    return `
+      <div class="pr-row" style="background: rgba(255,255,255,0.02)">
+        <div>
+          <span class="pulse-dot ${dotClass}"></span>
+          <span class="badge ${priorityClass}">${p.action_priority.toUpperCase()}</span>
+        </div>
+        <div>
+          <a href="${p.url}" target="_blank" class="pr-title">${escapeHtml(p.title)}</a>
+          <div class="pr-meta">
+            <a href="https://github.com/${p.repo}" target="_blank" class="repo-pill">${p.repo}</a>
+            <span> #${p.number}</span>
+            <span> · ${p.last_comment ? '@' + p.last_comment.user + ' 评论了' : ''}${p.last_review ? ' @' + p.last_review.user + ' ' + reviewStateText(p.last_review.state) : ''}</span>
+          </div>
+          <div class="mt-1">
+            ${p.action_reasons.map(r => `<span class="reason-chip">${escapeHtml(r)}</span>`).join('')}
+          </div>
+        </div>
+        <a href="${p.url}" target="_blank" class="text-sm hover:underline" style="color: var(--accent)">前往 →</a>
+      </div>
+    `;
+  }).join('');
+}
+
+function reviewStateText(state) {
+  return {
+    'CHANGES_REQUESTED': '请求修改',
+    'APPROVED': '已 approve',
+    'COMMENTED': '评论了',
+    'DISMISSED': 'dismissed',
+  }[state] || state;
+}
+
+function renderRepoBars() {
+  const stats = DATA.summary.repo_stats;
+  const repos = Object.entries(stats).sort((a, b) => b[1].total - a[1].total);
+  const maxTotal = Math.max(...repos.map(r => r[1].total));
+  
+  document.getElementById('repo-bars').innerHTML = repos.map(([repo, s]) => {
+    const pct = (s.total / maxTotal) * 100;
+    const openPct = (s.open / s.total) * 100;
+    const mergedPct = (s.merged / s.total) * 100;
+    const closedPct = (s.closed / s.total) * 100;
+    return `
+      <div>
+        <div class="flex justify-between mb-1 text-sm">
+          <a href="https://github.com/${repo}" target="_blank" class="hover:underline" style="color: var(--blue)">${repo}</a>
+          <span class="mono text-xs" style="color: var(--muted)">
+            ${s.total} (🟢${s.open} 🟣${s.merged} 🔴${s.closed})
+          </span>
+        </div>
+        <div class="progress-bar" style="width: ${pct}%">
+          <div style="width: ${openPct}%; background: var(--green)" title="Open: ${s.open}"></div>
+          <div style="width: ${mergedPct}%; background: var(--purple)" title="Merged: ${s.merged}"></div>
+          <div style="width: ${closedPct}%; background: var(--red)" title="Closed: ${s.closed}"></div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function renderPRList() {
+  let prs = DATA.prs;
+  
+  // 过滤
+  if (currentFilter === 'open') {
+    prs = prs.filter(p => p.state === 'open');
+  } else if (currentFilter === 'merged') {
+    prs = prs.filter(p => p.state === 'merged');
+  } else if (currentFilter === 'closed') {
+    prs = prs.filter(p => p.state === 'closed');
+  } else if (currentFilter === 'needs_action') {
+    prs = prs.filter(p => p.needs_action && p.state === 'open');
+  }
+  
+  // 搜索
+  if (searchTerm) {
+    const t = searchTerm.toLowerCase();
+    prs = prs.filter(p => 
+      p.title.toLowerCase().includes(t) || 
+      p.repo.toLowerCase().includes(t) ||
+      String(p.number).includes(t)
+    );
+  }
+  
+  // 排序：open 在前，按 updated_at 倒序
+  prs.sort((a, b) => {
+    if (a.state === 'open' && b.state !== 'open') return -1;
+    if (a.state !== 'open' && b.state === 'open') return 1;
+    return (b.updated_at || '').localeCompare(a.updated_at || '');
+  });
+  
+  const listEl = document.getElementById('pr-list');
+  const emptyEl = document.getElementById('empty-state');
+  
+  if (prs.length === 0) {
+    listEl.innerHTML = '';
+    emptyEl.classList.remove('hidden');
+    return;
+  }
+  emptyEl.classList.add('hidden');
+  
+  listEl.innerHTML = prs.map(p => {
+    const stateBadge = p.state === 'open' ? 'badge-open' :
+                       p.state === 'merged' ? 'badge-merged' : 'badge-closed';
+    const stateText = p.state === 'open' ? 'Open' :
+                      p.state === 'merged' ? 'Merged' : 'Closed';
+    const ago = p.updated_at ? timeAgo(new Date(p.updated_at)) : '';
+    const lines = (p.additions != null && p.deletions != null) 
+      ? `<span style="color: var(--green)">+${p.additions}</span> <span style="color: var(--red)">-${p.deletions}</span>` 
+      : '';
+    return `
+      <div class="pr-row fade-in">
+        <div>
+          <span class="badge ${stateBadge}">${stateText}</span>
+          ${p.needs_action ? `<span class="badge badge-${p.action_priority === 'high' ? 'high' : p.action_priority === 'medium' ? 'medium' : 'low'}" style="margin-left: 4px">⚠</span>` : ''}
+        </div>
+        <div>
+          <a href="${p.url}" target="_blank" class="pr-title">${escapeHtml(p.title)}</a>
+          <div class="pr-meta">
+            <a href="https://github.com/${p.repo}" target="_blank" class="repo-pill">${p.repo}</a>
+            <span> #${p.number}</span>
+            <span> · ${ago}</span>
+            ${lines ? ` · ${lines}` : ''}
+            ${p.merge_state && p.merge_state !== 'CLEAN' ? ` · <span style="color: var(--yellow)">${p.merge_state}</span>` : ''}
+          </div>
+        </div>
+        <a href="${p.url}" target="_blank" class="text-sm hover:underline" style="color: var(--accent)">→</a>
+      </div>
+    `;
+  }).join('');
+}
+
+function renderCharts() {
+  renderTimelineChart();
+  renderStateChart();
+}
+
+function renderTimelineChart() {
+  const daily = DATA.summary.daily;
+  const dates = Object.keys(daily).sort();
+  // 最近 30 天
+  const recent = dates.slice(-30);
+  const created = recent.map(d => daily[d].created);
+  const merged = recent.map(d => daily[d].merged);
+  const closed = recent.map(d => daily[d].closed);
+
+  const ctx = document.getElementById('chart-timeline');
+  if (charts.timeline) charts.timeline.destroy();
+  charts.timeline = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: recent,
+      datasets: [
+        { label: 'Created', data: created, backgroundColor: 'rgba(63,185,80,0.7)' },
+        { label: 'Merged', data: merged, backgroundColor: 'rgba(188,140,255,0.7)' },
+        { label: 'Closed', data: closed, backgroundColor: 'rgba(248,81,73,0.5)' },
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { labels: { color: '#8b949e', font: { size: 11 } } },
+        tooltip: { mode: 'index' }
+      },
+      scales: {
+        x: { stacked: true, ticks: { color: '#8b949e', font: { size: 10 } }, grid: { display: false } },
+        y: { stacked: true, ticks: { color: '#8b949e' }, grid: { color: 'rgba(48,54,61,0.5)' } }
+      }
+    }
+  });
+}
+
+function renderStateChart() {
+  const s = DATA.summary;
+  const ctx = document.getElementById('chart-states');
+  if (charts.states) charts.states.destroy();
+  charts.states = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Open', 'Merged', 'Closed'],
+      datasets: [{
+        data: [s.open, s.merged, s.closed],
+        backgroundColor: ['rgba(63,185,80,0.8)', 'rgba(188,140,255,0.8)', 'rgba(248,81,73,0.6)'],
+        borderColor: ['#161b22', '#161b22', '#161b22'],
+        borderWidth: 3,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'bottom', labels: { color: '#8b949e', font: { size: 12 } } }
+      }
+    }
+  });
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[c]));
+}
+
+// ===== 事件绑定 =====
+document.getElementById('filters').addEventListener('click', e => {
+  if (e.target.classList.contains('filter-btn')) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    e.target.classList.add('active');
+    currentFilter = e.target.dataset.filter;
+    renderPRList();
+  }
+});
+
+document.getElementById('search').addEventListener('input', e => {
+  searchTerm = e.target.value;
+  renderPRList();
+});
+
+// ===== 自动刷新（每 5 分钟） =====
+setInterval(loadData, 5 * 60 * 1000);
+
+// 启动
+loadData();
+</script>
+
+</body>
+</html>
