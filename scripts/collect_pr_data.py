@@ -322,21 +322,28 @@ def build_pr_record(pr, fetch_detail=False):
 
 def compute_summary(prs):
     """计算总览统计。"""
-    from collections import Counter
+    from collections import Counter, defaultdict
     total = len(prs)
     states = Counter(p["state"] for p in prs)
     open_count = states.get("open", 0)
     merged_count = states.get("merged", 0)
     closed_count = states.get("closed", 0)  # closed but not merged
 
-    # 按仓库统计
+    # 按仓库统计（含成功率）
     repo_stats = {}
     for p in prs:
         repo = p["repo"]
         if repo not in repo_stats:
-            repo_stats[repo] = {"open": 0, "merged": 0, "closed": 0, "total": 0}
+            repo_stats[repo] = {"open": 0, "merged": 0, "closed": 0, "total": 0,
+                               "first_pr_at": None, "last_pr_at": None}
         repo_stats[repo][p["state"]] = repo_stats[repo].get(p["state"], 0) + 1
         repo_stats[repo]["total"] += 1
+        created = p.get("created_at", "")
+        if created:
+            if not repo_stats[repo]["first_pr_at"] or created < repo_stats[repo]["first_pr_at"]:
+                repo_stats[repo]["first_pr_at"] = created
+            if not repo_stats[repo]["last_pr_at"] or created > repo_stats[repo]["last_pr_at"]:
+                repo_stats[repo]["last_pr_at"] = created
 
     # 时间趋势（按天）
     daily = {}
@@ -363,6 +370,57 @@ def compute_summary(prs):
     # 合并率
     merge_rate = (merged_count / total * 100) if total > 0 else 0
 
+    # === 新维度 ===
+    # 1. 活跃度：最近 7/30/90 天的 PR 数
+    now = datetime.now(timezone.utc)
+    recent_7d = sum(1 for p in prs if p.get("created_at") and
+                    (now - datetime.fromisoformat(p["created_at"].replace("Z", "+00:00"))).days <= 7)
+    recent_30d = sum(1 for p in prs if p.get("created_at") and
+                     (now - datetime.fromisoformat(p["created_at"].replace("Z", "+00:00"))).days <= 30)
+    recent_90d = sum(1 for p in prs if p.get("created_at") and
+                     (now - datetime.fromisoformat(p["created_at"].replace("Z", "+00:00"))).days <= 90)
+
+    # 2. 平均 review 等待时间（open PR 的年龄）
+    open_ages = []
+    for p in prs:
+        if p["state"] == "open" and p.get("created_at"):
+            age = (now - datetime.fromisoformat(p["created_at"].replace("Z", "+00:00"))).days
+            open_ages.append(age)
+    avg_open_age = sum(open_ages) / len(open_ages) if open_ages else 0
+    oldest_open = max(open_ages) if open_ages else 0
+
+    # 3. 合并耗时（merged PR 从创建到合并的时间）
+    merge_times = []
+    for p in prs:
+        if p["state"] == "merged" and p.get("created_at") and p.get("closed_at"):
+            created = datetime.fromisoformat(p["created_at"].replace("Z", "+00:00"))
+            merged_at = datetime.fromisoformat(p["closed_at"].replace("Z", "+00:00"))
+            delta_hours = (merged_at - created).total_seconds() / 3600
+            if delta_hours >= 0:
+                merge_times.append(delta_hours)
+    avg_merge_hours = sum(merge_times) / len(merge_times) if merge_times else 0
+
+    # 4. 每个仓库的合并率
+    for repo, stats in repo_stats.items():
+        attempted = stats["merged"] + stats["closed"]  # 已有结论的 PR
+        if attempted > 0:
+            stats["success_rate"] = round(stats["merged"] / attempted * 100, 1)
+        else:
+            stats["success_rate"] = None  # 全是 open，还没结论
+
+    # 5. 代码量统计
+    total_additions = sum(p.get("additions") or 0 for p in prs if p["state"] == "open")
+    total_deletions = sum(p.get("deletions") or 0 for p in prs if p["state"] == "open")
+
+    # 6. 每周活跃度（用于热力图）
+    weekly = defaultdict(lambda: {"created": 0})
+    for p in prs:
+        if p.get("created_at"):
+            d = datetime.fromisoformat(p["created_at"].replace("Z", "+00:00"))
+            iso_year, iso_week, _ = d.isocalendar()
+            week_key = f"{iso_year}-W{iso_week:02d}"
+            weekly[week_key]["created"] += 1
+
     return {
         "total": total,
         "open": open_count,
@@ -374,6 +432,25 @@ def compute_summary(prs):
         "high_priority_count": len(high_priority),
         "repo_stats": repo_stats,
         "daily": dict(sorted(daily.items())),
+        # 新维度
+        "activity": {
+            "recent_7d": recent_7d,
+            "recent_30d": recent_30d,
+            "recent_90d": recent_90d,
+        },
+        "open_pr_aging": {
+            "avg_days": round(avg_open_age, 1),
+            "oldest_days": oldest_open,
+        },
+        "merge_speed": {
+            "avg_hours": round(avg_merge_hours, 1),
+            "sample_size": len(merge_times),
+        },
+        "open_code_delta": {
+            "additions": total_additions,
+            "deletions": total_deletions,
+        },
+        "weekly": dict(sorted(weekly.items())),
     }
 
 

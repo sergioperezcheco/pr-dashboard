@@ -1,147 +1,213 @@
 {
-  "generated_at": "2026-07-19T14:34:56.225618+00:00",
+  "generated_at": "2026-07-19T14:58:21.439665+00:00",
   "author": "sergioperezcheco",
   "summary": {
-    "total": 82,
-    "open": 38,
+    "total": 83,
+    "open": 39,
     "merged": 6,
     "closed": 38,
-    "merge_rate": 7.3,
+    "merge_rate": 7.2,
     "repo_count": 22,
     "needs_action_count": 11,
     "high_priority_count": 2,
     "repo_stats": {
+      "langgenius/dify": {
+        "open": 2,
+        "merged": 3,
+        "closed": 0,
+        "total": 5,
+        "first_pr_at": "2026-06-27T16:31:31Z",
+        "last_pr_at": "2026-07-19T14:47:21Z",
+        "success_rate": 100.0
+      },
       "awslabs/mcp": {
         "open": 7,
         "merged": 0,
         "closed": 0,
-        "total": 7
+        "total": 7,
+        "first_pr_at": "2026-07-15T02:43:00Z",
+        "last_pr_at": "2026-07-19T13:19:01Z",
+        "success_rate": null
       },
       "trufflesecurity/trufflehog": {
         "open": 10,
         "merged": 0,
         "closed": 0,
-        "total": 10
+        "total": 10,
+        "first_pr_at": "2026-06-27T15:42:43Z",
+        "last_pr_at": "2026-07-19T11:55:55Z",
+        "success_rate": null
       },
       "NousResearch/hermes-agent": {
         "open": 4,
         "merged": 0,
         "closed": 3,
-        "total": 7
-      },
-      "langgenius/dify": {
-        "open": 1,
-        "merged": 3,
-        "closed": 0,
-        "total": 4
+        "total": 7,
+        "first_pr_at": "2026-06-27T16:55:41Z",
+        "last_pr_at": "2026-07-19T05:27:34Z",
+        "success_rate": 0.0
       },
       "huggingface/diffusers": {
         "open": 6,
         "merged": 0,
         "closed": 1,
-        "total": 7
+        "total": 7,
+        "first_pr_at": "2026-07-17T08:50:42Z",
+        "last_pr_at": "2026-07-19T03:49:19Z",
+        "success_rate": 0.0
       },
       "huggingface/huggingface_hub": {
         "open": 1,
         "merged": 0,
         "closed": 1,
-        "total": 2
+        "total": 2,
+        "first_pr_at": "2026-07-17T09:00:38Z",
+        "last_pr_at": "2026-07-18T23:25:59Z",
+        "success_rate": 0.0
       },
       "ComposioHQ/composio": {
         "open": 3,
         "merged": 0,
         "closed": 0,
-        "total": 3
+        "total": 3,
+        "first_pr_at": "2026-07-17T07:30:20Z",
+        "last_pr_at": "2026-07-18T23:22:16Z",
+        "success_rate": null
       },
       "prometheus/prometheus": {
         "open": 1,
         "merged": 0,
         "closed": 0,
-        "total": 1
+        "total": 1,
+        "first_pr_at": "2026-07-17T21:28:15Z",
+        "last_pr_at": "2026-07-17T21:28:15Z",
+        "success_rate": null
       },
       "ory/kratos": {
         "open": 1,
         "merged": 0,
         "closed": 0,
-        "total": 1
+        "total": 1,
+        "first_pr_at": "2026-07-01T15:57:08Z",
+        "last_pr_at": "2026-07-01T15:57:08Z",
+        "success_rate": null
       },
       "ory/go-oidc": {
         "open": 1,
         "merged": 0,
         "closed": 0,
-        "total": 1
+        "total": 1,
+        "first_pr_at": "2026-07-01T15:54:01Z",
+        "last_pr_at": "2026-07-01T15:54:01Z",
+        "success_rate": null
       },
       "keycloak/keycloak": {
         "open": 1,
         "merged": 0,
         "closed": 0,
-        "total": 1
+        "total": 1,
+        "first_pr_at": "2026-07-01T15:48:11Z",
+        "last_pr_at": "2026-07-01T15:48:11Z",
+        "success_rate": null
       },
       "browser-use/browser-use": {
         "open": 1,
         "merged": 0,
         "closed": 0,
-        "total": 1
+        "total": 1,
+        "first_pr_at": "2026-07-01T11:36:35Z",
+        "last_pr_at": "2026-07-01T11:36:35Z",
+        "success_rate": null
       },
       "shadcn-ui/ui": {
         "open": 1,
         "merged": 0,
         "closed": 0,
-        "total": 1
+        "total": 1,
+        "first_pr_at": "2026-06-28T04:51:24Z",
+        "last_pr_at": "2026-06-28T04:51:24Z",
+        "success_rate": null
       },
       "langchain-ai/langchain": {
         "open": 0,
         "merged": 0,
         "closed": 20,
-        "total": 20
+        "total": 20,
+        "first_pr_at": "2026-07-18T05:08:06Z",
+        "last_pr_at": "2026-07-19T03:18:45Z",
+        "success_rate": 0.0
       },
       "pydantic/pydantic-ai": {
         "open": 0,
         "merged": 0,
         "closed": 6,
-        "total": 6
+        "total": 6,
+        "first_pr_at": "2026-07-17T07:31:57Z",
+        "last_pr_at": "2026-07-19T02:28:06Z",
+        "success_rate": 0.0
       },
       "ansible/ansible": {
         "open": 0,
         "merged": 0,
         "closed": 2,
-        "total": 2
+        "total": 2,
+        "first_pr_at": "2026-07-18T05:07:04Z",
+        "last_pr_at": "2026-07-18T06:28:01Z",
+        "success_rate": 0.0
       },
       "langchain-ai/langgraph": {
         "open": 0,
         "merged": 0,
         "closed": 2,
-        "total": 2
+        "total": 2,
+        "first_pr_at": "2026-07-17T07:34:19Z",
+        "last_pr_at": "2026-07-17T20:19:56Z",
+        "success_rate": 0.0
       },
       "openclaw/openclaw": {
         "open": 0,
         "merged": 0,
         "closed": 1,
-        "total": 1
+        "total": 1,
+        "first_pr_at": "2026-07-01T10:33:09Z",
+        "last_pr_at": "2026-07-01T10:33:09Z",
+        "success_rate": 0.0
       },
       "huggingface/transformers": {
         "open": 0,
         "merged": 0,
         "closed": 1,
-        "total": 1
+        "total": 1,
+        "first_pr_at": "2026-06-28T17:06:32Z",
+        "last_pr_at": "2026-06-28T17:06:32Z",
+        "success_rate": 0.0
       },
       "astral-sh/ruff": {
         "open": 0,
         "merged": 0,
         "closed": 1,
-        "total": 1
+        "total": 1,
+        "first_pr_at": "2026-06-28T04:45:59Z",
+        "last_pr_at": "2026-06-28T04:45:59Z",
+        "success_rate": 0.0
       },
       "gxr404/yuque-dl": {
         "open": 0,
         "merged": 1,
         "closed": 0,
-        "total": 1
+        "total": 1,
+        "first_pr_at": "2026-06-26T02:49:11Z",
+        "last_pr_at": "2026-06-26T02:49:11Z",
+        "success_rate": 100.0
       },
       "Fristiner/bankFortend": {
         "open": 0,
         "merged": 2,
         "closed": 0,
-        "total": 2
+        "total": 2,
+        "first_pr_at": "2025-01-02T16:01:47Z",
+        "last_pr_at": "2025-01-04T02:15:16Z",
+        "success_rate": 100.0
       }
     },
     "daily": {
@@ -191,13 +257,68 @@
         "closed": 22
       },
       "2026-07-19": {
-        "created": 12,
+        "created": 13,
         "merged": 1,
         "closed": 6
+      }
+    },
+    "activity": {
+      "recent_7d": 61,
+      "recent_30d": 81,
+      "recent_90d": 81
+    },
+    "open_pr_aging": {
+      "avg_days": 6.3,
+      "oldest_days": 21
+    },
+    "merge_speed": {
+      "avg_hours": 30.7,
+      "sample_size": 6
+    },
+    "open_code_delta": {
+      "additions": 5324,
+      "deletions": 2484
+    },
+    "weekly": {
+      "2025-W01": {
+        "created": 2
+      },
+      "2026-W26": {
+        "created": 14
+      },
+      "2026-W27": {
+        "created": 6
+      },
+      "2026-W29": {
+        "created": 61
       }
     }
   },
   "prs": [
+    {
+      "repo": "langgenius/dify",
+      "repo_short": "dify",
+      "repo_owner": "langgenius",
+      "number": 39238,
+      "title": "fix(ci): skip merge commits in hotfix cherry-pick provenance checker",
+      "url": "https://github.com/langgenius/dify/pull/39238",
+      "state": "open",
+      "created_at": "2026-07-19T14:47:21Z",
+      "closed_at": null,
+      "updated_at": "2026-07-19T14:47:25Z",
+      "needs_action": false,
+      "action_reasons": [],
+      "action_priority": "low",
+      "merge_state": "BLOCKED",
+      "review_decision": "REVIEW_REQUIRED",
+      "is_draft": false,
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "last_comment": null,
+      "last_review": null,
+      "failed_checks": []
+    },
     {
       "repo": "awslabs/mcp",
       "repo_short": "mcp",
@@ -290,7 +411,7 @@
       "state": "open",
       "created_at": "2026-07-19T04:13:46Z",
       "closed_at": null,
-      "updated_at": "2026-07-19T04:16:51Z",
+      "updated_at": "2026-07-19T14:49:16Z",
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
@@ -856,7 +977,7 @@
       "state": "open",
       "created_at": "2026-07-15T02:43:00Z",
       "closed_at": null,
-      "updated_at": "2026-07-19T07:50:53Z",
+      "updated_at": "2026-07-19T14:54:45Z",
       "needs_action": true,
       "action_reasons": [
         "📝 @cgalvan 请求修改"
