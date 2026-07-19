@@ -29,7 +29,7 @@ BOT_USERS = {
 SELF_USER = AUTHOR
 
 SCRIPT_DIR = Path(__file__).parent.resolve()
-WEB_DIR = SCRIPT_DIR.parent / "web"
+WEB_DIR = SCRIPT_DIR.parent / "docs"
 OUTPUT_FILE = WEB_DIR / "data.json"
 
 

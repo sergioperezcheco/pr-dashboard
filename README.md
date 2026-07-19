@@ -8,11 +8,10 @@
 pr-dashboard/
 ├── scripts/
 │   └── collect_pr_data.py   # 数据收集脚本（gh CLI → data.json）
-├── web/
+├── docs/                    # GitHub Pages 源（/docs 部署）
 │   ├── index.html           # 单页前端（Chart.js + Tailwind CDN）
 │   └── data.json            # 最新 PR 数据（自动更新）
-├── docs/
-│   └── README.md            # 本文档
+├── README.md
 └── .github/workflows/       # GitHub Actions（可选自动更新）
 ```
 
