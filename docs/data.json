@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-07-20T04:06:01.599111+00:00",
+  "generated_at": "2026-07-20T05:03:55.318535+00:00",
   "author": "sergioperezcheco",
   "summary": {
-    "total": 86,
-    "open": 42,
+    "total": 87,
+    "open": 43,
     "merged": 6,
     "closed": 38,
-    "merge_rate": 7.0,
+    "merge_rate": 6.9,
     "repo_count": 22,
     "needs_action_count": 9,
     "high_priority_count": 2,
     "repo_stats": {
       "langgenius/dify": {
-        "open": 5,
+        "open": 6,
         "merged": 3,
         "closed": 0,
-        "total": 8,
+        "total": 9,
         "first_pr_at": "2026-06-27T16:31:31Z",
-        "last_pr_at": "2026-07-20T03:44:08Z",
+        "last_pr_at": "2026-07-20T04:15:01Z",
         "success_rate": 100.0
       },
       "awslabs/mcp": {
@@ -262,18 +262,18 @@
         "closed": 6
       },
       "2026-07-20": {
-        "created": 3,
+        "created": 4,
         "merged": 0,
         "closed": 0
       }
     },
     "activity": {
-      "recent_7d": 64,
-      "recent_30d": 84,
-      "recent_90d": 84
+      "recent_7d": 65,
+      "recent_30d": 85,
+      "recent_90d": 85
     },
     "open_pr_aging": {
-      "avg_days": 6.4,
+      "avg_days": 6.3,
       "oldest_days": 22
     },
     "merge_speed": {
@@ -281,8 +281,8 @@
       "sample_size": 6
     },
     "open_code_delta": {
-      "additions": 5497,
-      "deletions": 2524
+      "additions": 5544,
+      "deletions": 2527
     },
     "weekly": {
       "2025-W01": {
@@ -298,11 +298,35 @@
         "created": 61
       },
       "2026-W30": {
-        "created": 3
+        "created": 4
       }
     }
   },
   "prs": [
+    {
+      "repo": "langgenius/dify",
+      "repo_short": "dify",
+      "repo_owner": "langgenius",
+      "number": 39273,
+      "title": "fix(web): stop doubling basePath in auth refresh redirects",
+      "url": "https://github.com/langgenius/dify/pull/39273",
+      "state": "open",
+      "created_at": "2026-07-20T04:15:01Z",
+      "closed_at": null,
+      "updated_at": "2026-07-20T04:15:05Z",
+      "needs_action": false,
+      "action_reasons": [],
+      "action_priority": "low",
+      "merge_state": "BLOCKED",
+      "review_decision": "REVIEW_REQUIRED",
+      "is_draft": false,
+      "additions": 47,
+      "deletions": 3,
+      "changed_files": 2,
+      "last_comment": null,
+      "last_review": null,
+      "failed_checks": []
+    },
     {
       "repo": "langgenius/dify",
       "repo_short": "dify",
@@ -463,7 +487,7 @@
         "💬 有未回复评论 (by @teknium1)"
       ],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "",
       "is_draft": false,
       "additions": 297,
@@ -1198,7 +1222,7 @@
       "updated_at": "2026-07-15T02:29:08Z",
       "needs_action": true,
       "action_reasons": [
-        "⏳ 等待 review 已 21 天，可考虑 ping"
+        "⏳ 等待 review 已 22 天，可考虑 ping"
       ],
       "action_priority": "low",
       "merge_state": "BLOCKED",
