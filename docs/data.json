@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T06:37:16.694835+00:00",
+  "generated_at": "2026-07-20T07:06:27.095744+00:00",
   "author": "sergioperezcheco",
   "summary": {
     "total": 88,
@@ -8,7 +8,7 @@
     "closed": 38,
     "merge_rate": 6.8,
     "repo_count": 22,
-    "needs_action_count": 11,
+    "needs_action_count": 12,
     "high_priority_count": 2,
     "repo_stats": {
       "huggingface/huggingface_hub": {
@@ -394,7 +394,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 39,
@@ -418,7 +418,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 20,
@@ -442,7 +442,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 1,
@@ -516,7 +516,7 @@
         "💬 有未回复评论 (by @teknium1)"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 297,
@@ -540,13 +540,13 @@
       "state": "open",
       "created_at": "2026-07-19T04:13:46Z",
       "closed_at": null,
-      "updated_at": "2026-07-20T05:40:42Z",
+      "updated_at": "2026-07-20T06:48:38Z",
       "needs_action": true,
       "action_reasons": [
         "💬 有未回复评论 (by @Dcsky777)"
       ],
       "action_priority": "medium",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 6,
@@ -763,9 +763,11 @@
       "created_at": "2026-07-18T12:25:31Z",
       "closed_at": null,
       "updated_at": "2026-07-19T04:35:00Z",
-      "needs_action": false,
-      "action_reasons": [],
-      "action_priority": "low",
+      "needs_action": true,
+      "action_reasons": [
+        "❌ CI 失败: golangci-lint"
+      ],
+      "action_priority": "medium",
       "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
@@ -774,7 +776,9 @@
       "changed_files": 2,
       "last_comment": null,
       "last_review": null,
-      "failed_checks": []
+      "failed_checks": [
+        "golangci-lint"
+      ]
     },
     {
       "repo": "trufflesecurity/trufflehog",
