@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-07-20T09:34:35.812200+00:00",
+  "generated_at": "2026-07-20T10:06:09.900357+00:00",
   "author": "sergioperezcheco",
   "summary": {
     "total": 89,
-    "open": 44,
+    "open": 43,
     "merged": 6,
-    "closed": 39,
+    "closed": 40,
     "merge_rate": 6.7,
     "repo_count": 22,
-    "needs_action_count": 12,
+    "needs_action_count": 11,
     "high_priority_count": 2,
     "repo_stats": {
       "langgenius/dify": {
@@ -54,15 +54,6 @@
         "total": 7,
         "first_pr_at": "2026-07-17T08:50:42Z",
         "last_pr_at": "2026-07-19T03:49:19Z",
-        "success_rate": 0.0
-      },
-      "huggingface/huggingface_hub": {
-        "open": 1,
-        "merged": 0,
-        "closed": 2,
-        "total": 3,
-        "first_pr_at": "2026-07-17T09:00:38Z",
-        "last_pr_at": "2026-07-20T05:13:27Z",
         "success_rate": 0.0
       },
       "ComposioHQ/composio": {
@@ -127,6 +118,15 @@
         "first_pr_at": "2026-06-28T04:51:24Z",
         "last_pr_at": "2026-06-28T04:51:24Z",
         "success_rate": null
+      },
+      "huggingface/huggingface_hub": {
+        "open": 0,
+        "merged": 0,
+        "closed": 3,
+        "total": 3,
+        "first_pr_at": "2026-07-17T09:00:38Z",
+        "last_pr_at": "2026-07-20T05:13:27Z",
+        "success_rate": 0.0
       },
       "langchain-ai/langchain": {
         "open": 0,
@@ -264,7 +264,7 @@
       "2026-07-20": {
         "created": 6,
         "merged": 0,
-        "closed": 1
+        "closed": 2
       }
     },
     "activity": {
@@ -273,7 +273,7 @@
       "recent_90d": 87
     },
     "open_pr_aging": {
-      "avg_days": 6.2,
+      "avg_days": 6.4,
       "oldest_days": 22
     },
     "merge_speed": {
@@ -281,8 +281,8 @@
       "sample_size": 6
     },
     "open_code_delta": {
-      "additions": 5706,
-      "deletions": 2555
+      "additions": 5592,
+      "deletions": 2552
     },
     "weekly": {
       "2025-W01": {
@@ -313,10 +313,10 @@
       "state": "open",
       "created_at": "2026-07-20T09:20:54Z",
       "closed_at": null,
-      "updated_at": "2026-07-20T09:23:09Z",
+      "updated_at": "2026-07-20T09:41:47Z",
       "needs_action": true,
       "action_reasons": [
-        "❌ CI 失败: Run API Tests / API Unit Tests (3.12)"
+        "❌ CI 失败: API Tests, Run API Tests / API Unit Tests (3.12)"
       ],
       "action_priority": "medium",
       "merge_state": "BLOCKED",
@@ -328,6 +328,7 @@
       "last_comment": null,
       "last_review": null,
       "failed_checks": [
+        "API Tests",
         "Run API Tests / API Unit Tests (3.12)"
       ]
     },
@@ -515,7 +516,7 @@
         "💬 有未回复评论 (by @teknium1)"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 297,
@@ -584,30 +585,6 @@
       "failed_checks": []
     },
     {
-      "repo": "huggingface/huggingface_hub",
-      "repo_short": "huggingface_hub",
-      "repo_owner": "huggingface",
-      "number": 4547,
-      "title": "fix: bound safetensors metadata Range requests with a timeout",
-      "url": "https://github.com/huggingface/huggingface_hub/pull/4547",
-      "state": "open",
-      "created_at": "2026-07-18T23:25:59Z",
-      "closed_at": null,
-      "updated_at": "2026-07-19T08:49:46Z",
-      "needs_action": false,
-      "action_reasons": [],
-      "action_priority": "low",
-      "merge_state": "BLOCKED",
-      "review_decision": "REVIEW_REQUIRED",
-      "is_draft": false,
-      "additions": 114,
-      "deletions": 3,
-      "changed_files": 2,
-      "last_comment": null,
-      "last_review": null,
-      "failed_checks": []
-    },
-    {
       "repo": "ComposioHQ/composio",
       "repo_short": "composio",
       "repo_owner": "ComposioHQ",
@@ -641,13 +618,11 @@
       "state": "open",
       "created_at": "2026-07-18T18:41:19Z",
       "closed_at": null,
-      "updated_at": "2026-07-20T02:12:03Z",
-      "needs_action": true,
-      "action_reasons": [
-        "📉 分支落后 main，需要 rebase"
-      ],
-      "action_priority": "medium",
-      "merge_state": "BEHIND",
+      "updated_at": "2026-07-20T09:42:45Z",
+      "needs_action": false,
+      "action_reasons": [],
+      "action_priority": "low",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 147,
@@ -1286,7 +1261,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 167,
@@ -1339,7 +1314,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 27,
@@ -1370,7 +1345,7 @@
         "💬 有未回复评论 (by @teknium1)"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 1,
@@ -1616,6 +1591,30 @@
       "created_at": "2026-07-19T00:07:18Z",
       "closed_at": "2026-07-19T00:07:30Z",
       "updated_at": "2026-07-19T00:08:42Z",
+      "needs_action": false,
+      "action_reasons": [],
+      "action_priority": "low",
+      "merge_state": null,
+      "review_decision": null,
+      "is_draft": false,
+      "additions": null,
+      "deletions": null,
+      "changed_files": null,
+      "last_comment": null,
+      "last_review": null,
+      "failed_checks": []
+    },
+    {
+      "repo": "huggingface/huggingface_hub",
+      "repo_short": "huggingface_hub",
+      "repo_owner": "huggingface",
+      "number": 4547,
+      "title": "fix: bound safetensors metadata Range requests with a timeout",
+      "url": "https://github.com/huggingface/huggingface_hub/pull/4547",
+      "state": "closed",
+      "created_at": "2026-07-18T23:25:59Z",
+      "closed_at": "2026-07-20T09:40:01Z",
+      "updated_at": "2026-07-20T09:40:01Z",
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
