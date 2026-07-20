@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T08:06:17.263647+00:00",
+  "generated_at": "2026-07-20T08:37:07.397398+00:00",
   "author": "sergioperezcheco",
   "summary": {
     "total": 88,
@@ -8,7 +8,7 @@
     "closed": 38,
     "merge_rate": 6.8,
     "repo_count": 22,
-    "needs_action_count": 16,
+    "needs_action_count": 15,
     "high_priority_count": 2,
     "repo_stats": {
       "huggingface/huggingface_hub": {
@@ -281,8 +281,8 @@
       "sample_size": 6
     },
     "open_code_delta": {
-      "additions": 5638,
-      "deletions": 2528
+      "additions": 5665,
+      "deletions": 2549
     },
     "weekly": {
       "2025-W01": {
@@ -361,24 +361,19 @@
       "state": "open",
       "created_at": "2026-07-20T03:44:08Z",
       "closed_at": null,
-      "updated_at": "2026-07-20T06:22:32Z",
-      "needs_action": true,
-      "action_reasons": [
-        "❌ CI 失败: API Tests, Run API Tests / API Unit Tests (3.12)"
-      ],
-      "action_priority": "medium",
+      "updated_at": "2026-07-20T08:14:39Z",
+      "needs_action": false,
+      "action_reasons": [],
+      "action_priority": "low",
       "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
-      "additions": 114,
-      "deletions": 3,
-      "changed_files": 2,
+      "additions": 141,
+      "deletions": 24,
+      "changed_files": 3,
       "last_comment": null,
       "last_review": null,
-      "failed_checks": [
-        "API Tests",
-        "Run API Tests / API Unit Tests (3.12)"
-      ]
+      "failed_checks": []
     },
     {
       "repo": "langgenius/dify",
@@ -766,12 +761,10 @@
       "state": "open",
       "created_at": "2026-07-18T12:25:31Z",
       "closed_at": null,
-      "updated_at": "2026-07-19T04:35:00Z",
-      "needs_action": true,
-      "action_reasons": [
-        "❌ CI 失败: golangci-lint"
-      ],
-      "action_priority": "medium",
+      "updated_at": "2026-07-20T08:22:14Z",
+      "needs_action": false,
+      "action_reasons": [],
+      "action_priority": "low",
       "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
@@ -780,9 +773,7 @@
       "changed_files": 2,
       "last_comment": null,
       "last_review": null,
-      "failed_checks": [
-        "golangci-lint"
-      ]
+      "failed_checks": []
     },
     {
       "repo": "trufflesecurity/trufflehog",
@@ -1067,10 +1058,12 @@
       "created_at": "2026-07-15T02:43:16Z",
       "closed_at": null,
       "updated_at": "2026-07-18T01:03:46Z",
-      "needs_action": false,
-      "action_reasons": [],
-      "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "needs_action": true,
+      "action_reasons": [
+        "📉 分支落后 main，需要 rebase"
+      ],
+      "action_priority": "medium",
+      "merge_state": "BEHIND",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 1,
@@ -1093,10 +1086,11 @@
       "updated_at": "2026-07-20T06:10:09Z",
       "needs_action": true,
       "action_reasons": [
+        "📉 分支落后 main，需要 rebase",
         "💬 有未回复评论 (by @prajwalendra)"
       ],
       "action_priority": "medium",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BEHIND",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 50,
@@ -1123,10 +1117,11 @@
       "updated_at": "2026-07-19T14:54:45Z",
       "needs_action": true,
       "action_reasons": [
-        "📝 @cgalvan 请求修改"
+        "📝 @cgalvan 请求修改",
+        "📉 分支落后 main，需要 rebase"
       ],
       "action_priority": "high",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BEHIND",
       "review_decision": "CHANGES_REQUESTED",
       "is_draft": false,
       "additions": 12,
@@ -1216,7 +1211,7 @@
         "⏳ 等待 review 已 18 天，可考虑 ping"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 8,
@@ -1296,7 +1291,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 167,
@@ -1349,7 +1344,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 27,
@@ -1380,7 +1375,7 @@
         "💬 有未回复评论 (by @teknium1)"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 1,
