@@ -1,16 +1,25 @@
 {
-  "generated_at": "2026-07-20T05:03:55.318535+00:00",
+  "generated_at": "2026-07-20T05:36:10.471774+00:00",
   "author": "sergioperezcheco",
   "summary": {
-    "total": 87,
-    "open": 43,
+    "total": 88,
+    "open": 44,
     "merged": 6,
     "closed": 38,
-    "merge_rate": 6.9,
+    "merge_rate": 6.8,
     "repo_count": 22,
-    "needs_action_count": 9,
+    "needs_action_count": 10,
     "high_priority_count": 2,
     "repo_stats": {
+      "huggingface/huggingface_hub": {
+        "open": 2,
+        "merged": 0,
+        "closed": 1,
+        "total": 3,
+        "first_pr_at": "2026-07-17T09:00:38Z",
+        "last_pr_at": "2026-07-20T05:13:27Z",
+        "success_rate": 0.0
+      },
       "langgenius/dify": {
         "open": 6,
         "merged": 3,
@@ -54,15 +63,6 @@
         "total": 7,
         "first_pr_at": "2026-07-17T08:50:42Z",
         "last_pr_at": "2026-07-19T03:49:19Z",
-        "success_rate": 0.0
-      },
-      "huggingface/huggingface_hub": {
-        "open": 1,
-        "merged": 0,
-        "closed": 1,
-        "total": 2,
-        "first_pr_at": "2026-07-17T09:00:38Z",
-        "last_pr_at": "2026-07-18T23:25:59Z",
         "success_rate": 0.0
       },
       "ComposioHQ/composio": {
@@ -262,18 +262,18 @@
         "closed": 6
       },
       "2026-07-20": {
-        "created": 4,
+        "created": 5,
         "merged": 0,
         "closed": 0
       }
     },
     "activity": {
-      "recent_7d": 65,
-      "recent_30d": 85,
-      "recent_90d": 85
+      "recent_7d": 66,
+      "recent_30d": 86,
+      "recent_90d": 86
     },
     "open_pr_aging": {
-      "avg_days": 6.3,
+      "avg_days": 6.2,
       "oldest_days": 22
     },
     "merge_speed": {
@@ -281,8 +281,8 @@
       "sample_size": 6
     },
     "open_code_delta": {
-      "additions": 5544,
-      "deletions": 2527
+      "additions": 5638,
+      "deletions": 2528
     },
     "weekly": {
       "2025-W01": {
@@ -298,11 +298,35 @@
         "created": 61
       },
       "2026-W30": {
-        "created": 4
+        "created": 5
       }
     }
   },
   "prs": [
+    {
+      "repo": "huggingface/huggingface_hub",
+      "repo_short": "huggingface_hub",
+      "repo_owner": "huggingface",
+      "number": 4550,
+      "title": "fix(cache): list repos with broken symlinks instead of silently dropping them",
+      "url": "https://github.com/huggingface/huggingface_hub/pull/4550",
+      "state": "open",
+      "created_at": "2026-07-20T05:13:27Z",
+      "closed_at": null,
+      "updated_at": "2026-07-20T05:16:26Z",
+      "needs_action": false,
+      "action_reasons": [],
+      "action_priority": "low",
+      "merge_state": "BLOCKED",
+      "review_decision": "REVIEW_REQUIRED",
+      "is_draft": false,
+      "additions": 94,
+      "deletions": 1,
+      "changed_files": 2,
+      "last_comment": null,
+      "last_review": null,
+      "failed_checks": []
+    },
     {
       "repo": "langgenius/dify",
       "repo_short": "dify",
@@ -487,7 +511,7 @@
         "💬 有未回复评论 (by @teknium1)"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 297,
@@ -511,17 +535,23 @@
       "state": "open",
       "created_at": "2026-07-19T04:13:46Z",
       "closed_at": null,
-      "updated_at": "2026-07-19T14:49:16Z",
-      "needs_action": false,
-      "action_reasons": [],
-      "action_priority": "low",
+      "updated_at": "2026-07-20T05:07:20Z",
+      "needs_action": true,
+      "action_reasons": [
+        "💬 有未回复评论 (by @Dcsky777)"
+      ],
+      "action_priority": "medium",
       "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 6,
       "deletions": 1,
       "changed_files": 1,
-      "last_comment": null,
+      "last_comment": {
+        "user": "Dcsky777",
+        "at": "2026-07-20T05:07:20Z",
+        "body": "I modified the corresponding code in the file, but it’s still throwing errors.\r\n<img width=\"1023\" height=\"652\" alt=\"屏幕截图 2026-07-20 130657\" src=\"https://github.com/user-attachments/assets/e0bac87f-02b"
+      },
       "last_review": null,
       "failed_checks": []
     },
