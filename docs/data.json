@@ -1,16 +1,34 @@
 {
-  "generated_at": "2026-07-20T12:35:55.412856+00:00",
+  "generated_at": "2026-07-20T13:36:33.970666+00:00",
   "author": "sergioperezcheco",
   "summary": {
-    "total": 92,
-    "open": 45,
+    "total": 94,
+    "open": 47,
     "merged": 7,
     "closed": 40,
-    "merge_rate": 7.6,
+    "merge_rate": 7.4,
     "repo_count": 22,
-    "needs_action_count": 13,
+    "needs_action_count": 19,
     "high_priority_count": 2,
     "repo_stats": {
+      "browser-use/browser-use": {
+        "open": 2,
+        "merged": 0,
+        "closed": 0,
+        "total": 2,
+        "first_pr_at": "2026-07-01T11:36:35Z",
+        "last_pr_at": "2026-07-20T13:16:57Z",
+        "success_rate": null
+      },
+      "huggingface/huggingface_hub": {
+        "open": 1,
+        "merged": 0,
+        "closed": 3,
+        "total": 4,
+        "first_pr_at": "2026-07-17T09:00:38Z",
+        "last_pr_at": "2026-07-20T12:46:06Z",
+        "success_rate": 0.0
+      },
       "NousResearch/hermes-agent": {
         "open": 6,
         "merged": 0,
@@ -101,15 +119,6 @@
         "last_pr_at": "2026-07-01T15:48:11Z",
         "success_rate": null
       },
-      "browser-use/browser-use": {
-        "open": 1,
-        "merged": 0,
-        "closed": 0,
-        "total": 1,
-        "first_pr_at": "2026-07-01T11:36:35Z",
-        "last_pr_at": "2026-07-01T11:36:35Z",
-        "success_rate": null
-      },
       "shadcn-ui/ui": {
         "open": 1,
         "merged": 0,
@@ -118,15 +127,6 @@
         "first_pr_at": "2026-06-28T04:51:24Z",
         "last_pr_at": "2026-06-28T04:51:24Z",
         "success_rate": null
-      },
-      "huggingface/huggingface_hub": {
-        "open": 0,
-        "merged": 0,
-        "closed": 3,
-        "total": 3,
-        "first_pr_at": "2026-07-17T09:00:38Z",
-        "last_pr_at": "2026-07-20T05:13:27Z",
-        "success_rate": 0.0
       },
       "langchain-ai/langchain": {
         "open": 0,
@@ -262,18 +262,18 @@
         "closed": 6
       },
       "2026-07-20": {
-        "created": 9,
+        "created": 11,
         "merged": 1,
         "closed": 2
       }
     },
     "activity": {
-      "recent_7d": 70,
-      "recent_30d": 90,
-      "recent_90d": 90
+      "recent_7d": 72,
+      "recent_30d": 92,
+      "recent_90d": 92
     },
     "open_pr_aging": {
-      "avg_days": 6.2,
+      "avg_days": 5.9,
       "oldest_days": 22
     },
     "merge_speed": {
@@ -281,8 +281,8 @@
       "sample_size": 7
     },
     "open_code_delta": {
-      "additions": 5697,
-      "deletions": 2563
+      "additions": 5832,
+      "deletions": 2567
     },
     "weekly": {
       "2025-W01": {
@@ -298,11 +298,70 @@
         "created": 61
       },
       "2026-W30": {
-        "created": 9
+        "created": 11
       }
     }
   },
   "prs": [
+    {
+      "repo": "browser-use/browser-use",
+      "repo_short": "browser-use",
+      "repo_owner": "browser-use",
+      "number": 5258,
+      "title": "fix(mcp): report tool execution failures with isError=True",
+      "url": "https://github.com/browser-use/browser-use/pull/5258",
+      "state": "open",
+      "created_at": "2026-07-20T13:16:57Z",
+      "closed_at": null,
+      "updated_at": "2026-07-20T13:25:00Z",
+      "needs_action": true,
+      "action_reasons": [
+        "❌ CI 失败: type-checker, code-style"
+      ],
+      "action_priority": "medium",
+      "merge_state": "BLOCKED",
+      "review_decision": "",
+      "is_draft": false,
+      "additions": 117,
+      "deletions": 3,
+      "changed_files": 2,
+      "last_comment": null,
+      "last_review": null,
+      "failed_checks": [
+        "type-checker",
+        "code-style"
+      ]
+    },
+    {
+      "repo": "huggingface/huggingface_hub",
+      "repo_short": "huggingface_hub",
+      "repo_owner": "huggingface",
+      "number": 4552,
+      "title": "fix(cli): allow '=' in hf jobs ls --label values",
+      "url": "https://github.com/huggingface/huggingface_hub/pull/4552",
+      "state": "open",
+      "created_at": "2026-07-20T12:46:06Z",
+      "closed_at": null,
+      "updated_at": "2026-07-20T13:06:51Z",
+      "needs_action": true,
+      "action_reasons": [
+        "💬 有未回复评论 (by @Wauplin)"
+      ],
+      "action_priority": "medium",
+      "merge_state": "BLOCKED",
+      "review_decision": "REVIEW_REQUIRED",
+      "is_draft": false,
+      "additions": 18,
+      "deletions": 1,
+      "changed_files": 2,
+      "last_comment": {
+        "user": "Wauplin",
+        "at": "2026-07-20T13:06:51Z",
+        "body": "Hi @sergioperezcheco , do you have a real world example for this use case? I don't see why not just doing `key=value` . As-is I'm a bit reluctant to merge it"
+      },
+      "last_review": null,
+      "failed_checks": []
+    },
     {
       "repo": "NousResearch/hermes-agent",
       "repo_short": "hermes-agent",
@@ -679,10 +738,12 @@
       "created_at": "2026-07-18T18:41:19Z",
       "closed_at": null,
       "updated_at": "2026-07-20T09:42:45Z",
-      "needs_action": false,
-      "action_reasons": [],
-      "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "needs_action": true,
+      "action_reasons": [
+        "📉 分支落后 main，需要 rebase"
+      ],
+      "action_priority": "medium",
+      "merge_state": "BEHIND",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 147,
@@ -847,10 +908,12 @@
       "created_at": "2026-07-18T05:50:31Z",
       "closed_at": null,
       "updated_at": "2026-07-20T09:10:27Z",
-      "needs_action": false,
-      "action_reasons": [],
-      "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "needs_action": true,
+      "action_reasons": [
+        "📉 分支落后 main，需要 rebase"
+      ],
+      "action_priority": "medium",
+      "merge_state": "BEHIND",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 53,
@@ -895,10 +958,12 @@
       "created_at": "2026-07-18T04:29:22Z",
       "closed_at": null,
       "updated_at": "2026-07-20T09:10:05Z",
-      "needs_action": false,
-      "action_reasons": [],
-      "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "needs_action": true,
+      "action_reasons": [
+        "📉 分支落后 main，需要 rebase"
+      ],
+      "action_priority": "medium",
+      "merge_state": "BEHIND",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 61,
@@ -1046,7 +1111,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 4,
@@ -1091,10 +1156,12 @@
       "created_at": "2026-07-15T02:43:16Z",
       "closed_at": null,
       "updated_at": "2026-07-20T09:10:16Z",
-      "needs_action": false,
-      "action_reasons": [],
-      "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "needs_action": true,
+      "action_reasons": [
+        "📉 分支落后 main，需要 rebase"
+      ],
+      "action_priority": "medium",
+      "merge_state": "BEHIND",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 1,
@@ -1117,10 +1184,11 @@
       "updated_at": "2026-07-20T09:09:43Z",
       "needs_action": true,
       "action_reasons": [
+        "📉 分支落后 main，需要 rebase",
         "💬 有未回复评论 (by @prajwalendra)"
       ],
       "action_priority": "medium",
-      "merge_state": "BLOCKED",
+      "merge_state": "BEHIND",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 50,
@@ -1147,10 +1215,11 @@
       "updated_at": "2026-07-20T11:09:21Z",
       "needs_action": true,
       "action_reasons": [
-        "📝 @cgalvan 请求修改"
+        "📝 @cgalvan 请求修改",
+        "📉 分支落后 main，需要 rebase"
       ],
       "action_priority": "high",
-      "merge_state": "BLOCKED",
+      "merge_state": "BEHIND",
       "review_decision": "CHANGES_REQUESTED",
       "is_draft": false,
       "additions": 12,
@@ -1175,14 +1244,14 @@
       "state": "open",
       "created_at": "2026-07-01T15:57:08Z",
       "closed_at": null,
-      "updated_at": "2026-07-20T01:37:38Z",
+      "updated_at": "2026-07-20T13:09:27Z",
       "needs_action": true,
       "action_reasons": [
         "📝 @hperl 请求修改",
         "❌ CI 失败: format, scanners"
       ],
       "action_priority": "high",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "CHANGES_REQUESTED",
       "is_draft": false,
       "additions": 3,
@@ -1240,7 +1309,7 @@
         "⏳ 等待 review 已 18 天，可考虑 ping"
       ],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 8,
@@ -1320,7 +1389,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "",
       "is_draft": false,
       "additions": 167,
@@ -1373,7 +1442,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "",
       "is_draft": false,
       "additions": 27,
@@ -1404,7 +1473,7 @@
         "💬 有未回复评论 (by @teknium1)"
       ],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "",
       "is_draft": false,
       "additions": 1,
