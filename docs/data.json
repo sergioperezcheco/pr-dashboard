@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-07-20T03:33:48.798165+00:00",
+  "generated_at": "2026-07-20T04:06:01.599111+00:00",
   "author": "sergioperezcheco",
   "summary": {
-    "total": 85,
-    "open": 41,
+    "total": 86,
+    "open": 42,
     "merged": 6,
     "closed": 38,
-    "merge_rate": 7.1,
+    "merge_rate": 7.0,
     "repo_count": 22,
-    "needs_action_count": 10,
+    "needs_action_count": 9,
     "high_priority_count": 2,
     "repo_stats": {
       "langgenius/dify": {
-        "open": 4,
+        "open": 5,
         "merged": 3,
         "closed": 0,
-        "total": 7,
+        "total": 8,
         "first_pr_at": "2026-06-27T16:31:31Z",
-        "last_pr_at": "2026-07-20T02:17:00Z",
+        "last_pr_at": "2026-07-20T03:44:08Z",
         "success_rate": 100.0
       },
       "awslabs/mcp": {
@@ -262,18 +262,18 @@
         "closed": 6
       },
       "2026-07-20": {
-        "created": 2,
+        "created": 3,
         "merged": 0,
         "closed": 0
       }
     },
     "activity": {
-      "recent_7d": 63,
-      "recent_30d": 83,
-      "recent_90d": 83
+      "recent_7d": 64,
+      "recent_30d": 84,
+      "recent_90d": 84
     },
     "open_pr_aging": {
-      "avg_days": 6.5,
+      "avg_days": 6.4,
       "oldest_days": 22
     },
     "merge_speed": {
@@ -281,8 +281,8 @@
       "sample_size": 6
     },
     "open_code_delta": {
-      "additions": 5383,
-      "deletions": 2521
+      "additions": 5497,
+      "deletions": 2524
     },
     "weekly": {
       "2025-W01": {
@@ -298,11 +298,35 @@
         "created": 61
       },
       "2026-W30": {
-        "created": 2
+        "created": 3
       }
     }
   },
   "prs": [
+    {
+      "repo": "langgenius/dify",
+      "repo_short": "dify",
+      "repo_owner": "langgenius",
+      "number": 39270,
+      "title": "fix(rate_limit): make enter() check-and-set atomic via Lua script",
+      "url": "https://github.com/langgenius/dify/pull/39270",
+      "state": "open",
+      "created_at": "2026-07-20T03:44:08Z",
+      "closed_at": null,
+      "updated_at": "2026-07-20T03:44:13Z",
+      "needs_action": false,
+      "action_reasons": [],
+      "action_priority": "low",
+      "merge_state": "BLOCKED",
+      "review_decision": "REVIEW_REQUIRED",
+      "is_draft": false,
+      "additions": 114,
+      "deletions": 3,
+      "changed_files": 2,
+      "last_comment": null,
+      "last_review": null,
+      "failed_checks": []
+    },
     {
       "repo": "langgenius/dify",
       "repo_short": "dify",
@@ -337,12 +361,10 @@
       "state": "open",
       "created_at": "2026-07-20T00:42:56Z",
       "closed_at": null,
-      "updated_at": "2026-07-20T01:23:44Z",
-      "needs_action": true,
-      "action_reasons": [
-        "❌ CI 失败: API Tests, Sandbox Runtime Tests, VDB Tests"
-      ],
-      "action_priority": "medium",
+      "updated_at": "2026-07-20T03:38:40Z",
+      "needs_action": false,
+      "action_reasons": [],
+      "action_priority": "low",
       "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
@@ -351,21 +373,7 @@
       "changed_files": 2,
       "last_comment": null,
       "last_review": null,
-      "failed_checks": [
-        "API Tests",
-        "Sandbox Runtime Tests",
-        "VDB Tests",
-        "Web Tests",
-        "CLI Tests",
-        "DB Migration Test",
-        "Web Full-Stack E2E",
-        "Skip Duplicate Checks",
-        "autofix",
-        "pyrefly-type-coverage",
-        "labeler",
-        "Validate PR title",
-        "pyrefly-diff"
-      ]
+      "failed_checks": []
     },
     {
       "repo": "langgenius/dify",
@@ -455,7 +463,7 @@
         "💬 有未回复评论 (by @teknium1)"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 297,
@@ -507,7 +515,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 29,
@@ -651,7 +659,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 25,
@@ -771,7 +779,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 41,
@@ -819,7 +827,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 65,
@@ -891,7 +899,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 33,
@@ -943,7 +951,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 4,
