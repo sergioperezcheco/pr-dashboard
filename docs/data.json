@@ -1,24 +1,33 @@
 {
-  "generated_at": "2026-07-20T11:03:40.778737+00:00",
+  "generated_at": "2026-07-20T12:06:59.277267+00:00",
   "author": "sergioperezcheco",
   "summary": {
-    "total": 90,
-    "open": 44,
+    "total": 92,
+    "open": 46,
     "merged": 6,
     "closed": 40,
-    "merge_rate": 6.7,
+    "merge_rate": 6.5,
     "repo_count": 22,
     "needs_action_count": 12,
     "high_priority_count": 2,
     "repo_stats": {
       "NousResearch/hermes-agent": {
-        "open": 5,
+        "open": 6,
         "merged": 0,
         "closed": 3,
-        "total": 8,
+        "total": 9,
         "first_pr_at": "2026-06-27T16:55:41Z",
-        "last_pr_at": "2026-07-20T10:39:40Z",
+        "last_pr_at": "2026-07-20T11:52:57Z",
         "success_rate": 0.0
+      },
+      "ComposioHQ/composio": {
+        "open": 4,
+        "merged": 0,
+        "closed": 0,
+        "total": 4,
+        "first_pr_at": "2026-07-17T07:30:20Z",
+        "last_pr_at": "2026-07-20T11:17:53Z",
+        "success_rate": null
       },
       "langgenius/dify": {
         "open": 7,
@@ -55,15 +64,6 @@
         "first_pr_at": "2026-07-17T08:50:42Z",
         "last_pr_at": "2026-07-19T03:49:19Z",
         "success_rate": 0.0
-      },
-      "ComposioHQ/composio": {
-        "open": 3,
-        "merged": 0,
-        "closed": 0,
-        "total": 3,
-        "first_pr_at": "2026-07-17T07:30:20Z",
-        "last_pr_at": "2026-07-18T23:22:16Z",
-        "success_rate": null
       },
       "prometheus/prometheus": {
         "open": 1,
@@ -262,18 +262,18 @@
         "closed": 6
       },
       "2026-07-20": {
-        "created": 7,
+        "created": 9,
         "merged": 0,
         "closed": 2
       }
     },
     "activity": {
-      "recent_7d": 68,
-      "recent_30d": 88,
-      "recent_90d": 88
+      "recent_7d": 70,
+      "recent_30d": 90,
+      "recent_90d": 90
     },
     "open_pr_aging": {
-      "avg_days": 6.2,
+      "avg_days": 6.0,
       "oldest_days": 22
     },
     "merge_speed": {
@@ -281,8 +281,8 @@
       "sample_size": 6
     },
     "open_code_delta": {
-      "additions": 5641,
-      "deletions": 2553
+      "additions": 5744,
+      "deletions": 2566
     },
     "weekly": {
       "2025-W01": {
@@ -298,11 +298,59 @@
         "created": 61
       },
       "2026-W30": {
-        "created": 7
+        "created": 9
       }
     }
   },
   "prs": [
+    {
+      "repo": "NousResearch/hermes-agent",
+      "repo_short": "hermes-agent",
+      "repo_owner": "NousResearch",
+      "number": 68021,
+      "title": "fix(telegram): pass explicit filename basename to bot.send_document",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/68021",
+      "state": "open",
+      "created_at": "2026-07-20T11:52:57Z",
+      "closed_at": null,
+      "updated_at": "2026-07-20T11:52:57Z",
+      "needs_action": false,
+      "action_reasons": [],
+      "action_priority": "low",
+      "merge_state": "BLOCKED",
+      "review_decision": "",
+      "is_draft": false,
+      "additions": 12,
+      "deletions": 3,
+      "changed_files": 1,
+      "last_comment": null,
+      "last_review": null,
+      "failed_checks": []
+    },
+    {
+      "repo": "ComposioHQ/composio",
+      "repo_short": "composio",
+      "repo_owner": "ComposioHQ",
+      "number": 3892,
+      "title": "fix(py/triggers): swallow malformed chunked frame instead of tearing down subscription",
+      "url": "https://github.com/ComposioHQ/composio/pull/3892",
+      "state": "open",
+      "created_at": "2026-07-20T11:17:53Z",
+      "closed_at": null,
+      "updated_at": "2026-07-20T11:21:13Z",
+      "needs_action": false,
+      "action_reasons": [],
+      "action_priority": "low",
+      "merge_state": "BLOCKED",
+      "review_decision": "REVIEW_REQUIRED",
+      "is_draft": false,
+      "additions": 91,
+      "deletions": 10,
+      "changed_files": 2,
+      "last_comment": null,
+      "last_review": null,
+      "failed_checks": []
+    },
     {
       "repo": "NousResearch/hermes-agent",
       "repo_short": "hermes-agent",
@@ -349,7 +397,7 @@
         "❌ CI 失败: API Tests, Run API Tests / API Unit Tests (3.12)"
       ],
       "action_priority": "medium",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 135,
@@ -376,7 +424,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 47,
@@ -400,7 +448,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 141,
@@ -424,7 +472,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 39,
@@ -448,7 +496,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 20,
@@ -472,7 +520,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 1,
@@ -546,7 +594,7 @@
         "💬 有未回复评论 (by @teknium1)"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 297,
@@ -576,7 +624,7 @@
         "💬 有未回复评论 (by @Dcsky777)"
       ],
       "action_priority": "medium",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 6,
@@ -1114,14 +1162,13 @@
       "state": "open",
       "created_at": "2026-07-15T02:43:00Z",
       "closed_at": null,
-      "updated_at": "2026-07-19T14:54:45Z",
+      "updated_at": "2026-07-20T11:09:21Z",
       "needs_action": true,
       "action_reasons": [
-        "📝 @cgalvan 请求修改",
-        "📉 分支落后 main，需要 rebase"
+        "📝 @cgalvan 请求修改"
       ],
       "action_priority": "high",
-      "merge_state": "BEHIND",
+      "merge_state": "BLOCKED",
       "review_decision": "CHANGES_REQUESTED",
       "is_draft": false,
       "additions": 12,
@@ -1291,7 +1338,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 167,
@@ -1320,7 +1367,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "",
       "is_draft": false,
       "additions": 6,
@@ -1344,7 +1391,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 27,
@@ -1375,7 +1422,7 @@
         "💬 有未回复评论 (by @teknium1)"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 1,
@@ -1403,7 +1450,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "",
       "is_draft": false,
       "additions": 1721,
@@ -1427,7 +1474,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "",
       "is_draft": false,
       "additions": 1633,
