@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-07-21T01:38:59.087090+00:00",
+  "generated_at": "2026-07-21T04:08:07.615129+00:00",
   "author": "sergioperezcheco",
   "summary": {
     "total": 96,
-    "open": 50,
-    "merged": 7,
+    "open": 49,
+    "merged": 8,
     "closed": 39,
-    "merge_rate": 7.3,
+    "merge_rate": 8.3,
     "repo_count": 22,
     "needs_action_count": 15,
     "high_priority_count": 2,
     "repo_stats": {
       "langgenius/dify": {
-        "open": 8,
-        "merged": 4,
+        "open": 7,
+        "merged": 5,
         "closed": 0,
         "total": 12,
         "first_pr_at": "2026-06-27T16:31:31Z",
@@ -268,7 +268,7 @@
       },
       "2026-07-21": {
         "created": 1,
-        "merged": 0,
+        "merged": 1,
         "closed": 0
       }
     },
@@ -278,15 +278,15 @@
       "recent_90d": 94
     },
     "open_pr_aging": {
-      "avg_days": 6.0,
+      "avg_days": 6.3,
       "oldest_days": 23
     },
     "merge_speed": {
-      "avg_hours": 27.5,
-      "sample_size": 7
+      "avg_hours": 24.3,
+      "sample_size": 8
     },
     "open_code_delta": {
-      "additions": 5895,
+      "additions": 5855,
       "deletions": 2577
     },
     "weekly": {
@@ -308,30 +308,6 @@
     }
   },
   "prs": [
-    {
-      "repo": "langgenius/dify",
-      "repo_short": "dify",
-      "repo_owner": "langgenius",
-      "number": 39329,
-      "title": "fix(configs): reject host:port-shaped PLUGIN_REMOTE_INSTALL_PORT with actionable hint",
-      "url": "https://github.com/langgenius/dify/pull/39329",
-      "state": "open",
-      "created_at": "2026-07-21T00:46:42Z",
-      "closed_at": null,
-      "updated_at": "2026-07-21T00:49:44Z",
-      "needs_action": false,
-      "action_reasons": [],
-      "action_priority": "low",
-      "merge_state": "BLOCKED",
-      "review_decision": "REVIEW_REQUIRED",
-      "is_draft": false,
-      "additions": 40,
-      "deletions": 0,
-      "changed_files": 2,
-      "last_comment": null,
-      "last_review": null,
-      "failed_checks": []
-    },
     {
       "repo": "langgenius/dify",
       "repo_short": "dify",
@@ -504,7 +480,7 @@
       "state": "open",
       "created_at": "2026-07-20T09:20:54Z",
       "closed_at": null,
-      "updated_at": "2026-07-20T09:41:47Z",
+      "updated_at": "2026-07-21T01:45:23Z",
       "needs_action": true,
       "action_reasons": [
         "❌ CI 失败: API Tests, Run API Tests / API Unit Tests (3.12)"
@@ -767,7 +743,7 @@
         "💬 有未回复评论 (by @dsfaccini)"
       ],
       "action_priority": "medium",
-      "merge_state": "UNKNOWN",
+      "merge_state": "CLEAN",
       "review_decision": "CHANGES_REQUESTED",
       "is_draft": false,
       "additions": 12,
@@ -1151,7 +1127,7 @@
       "state": "open",
       "created_at": "2026-07-17T21:28:15Z",
       "closed_at": null,
-      "updated_at": "2026-07-20T00:36:43Z",
+      "updated_at": "2026-07-21T01:46:36Z",
       "needs_action": true,
       "action_reasons": [
         "❌ CI 失败: Go tests with previous Go version"
@@ -1251,7 +1227,7 @@
       "state": "open",
       "created_at": "2026-07-15T02:43:12Z",
       "closed_at": null,
-      "updated_at": "2026-07-21T01:12:24Z",
+      "updated_at": "2026-07-21T01:48:57Z",
       "needs_action": true,
       "action_reasons": [
         "💬 有未回复评论 (by @prajwalendra)"
@@ -1281,7 +1257,7 @@
       "state": "open",
       "created_at": "2026-07-15T02:43:00Z",
       "closed_at": null,
-      "updated_at": "2026-07-21T01:10:33Z",
+      "updated_at": "2026-07-21T01:42:41Z",
       "needs_action": true,
       "action_reasons": [
         "📝 @cgalvan 请求修改"
@@ -1397,7 +1373,7 @@
       "state": "open",
       "created_at": "2026-07-01T11:36:35Z",
       "closed_at": null,
-      "updated_at": "2026-07-21T00:42:09Z",
+      "updated_at": "2026-07-21T01:49:32Z",
       "needs_action": true,
       "action_reasons": [
         "💬 有未回复评论 (by @itxaiohanglover)"
@@ -1606,6 +1582,30 @@
         "at": "2026-07-03T16:51:32Z",
         "body": "LGTM. The implementation follows the existing detector conventions, deduplicates matches before verification, adds appropriate unit and integration coverage, and registers the detector consistently. T"
       },
+      "failed_checks": []
+    },
+    {
+      "repo": "langgenius/dify",
+      "repo_short": "dify",
+      "repo_owner": "langgenius",
+      "number": 39329,
+      "title": "fix(configs): reject host:port-shaped PLUGIN_REMOTE_INSTALL_PORT with actionable hint",
+      "url": "https://github.com/langgenius/dify/pull/39329",
+      "state": "merged",
+      "created_at": "2026-07-21T00:46:42Z",
+      "closed_at": "2026-07-21T02:33:55Z",
+      "updated_at": "2026-07-21T02:33:55Z",
+      "needs_action": false,
+      "action_reasons": [],
+      "action_priority": "low",
+      "merge_state": null,
+      "review_decision": null,
+      "is_draft": false,
+      "additions": null,
+      "deletions": null,
+      "changed_files": null,
+      "last_comment": null,
+      "last_review": null,
       "failed_checks": []
     },
     {
