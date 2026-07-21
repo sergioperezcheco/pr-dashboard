@@ -1,16 +1,25 @@
 {
-  "generated_at": "2026-07-21T12:34:19.417909+00:00",
+  "generated_at": "2026-07-21T13:06:36.764566+00:00",
   "author": "sergioperezcheco",
   "summary": {
-    "total": 101,
-    "open": 54,
+    "total": 102,
+    "open": 55,
     "merged": 8,
     "closed": 39,
-    "merge_rate": 7.9,
+    "merge_rate": 7.8,
     "repo_count": 22,
-    "needs_action_count": 14,
-    "high_priority_count": 1,
+    "needs_action_count": 16,
+    "high_priority_count": 2,
     "repo_stats": {
+      "browser-use/browser-use": {
+        "open": 4,
+        "merged": 0,
+        "closed": 0,
+        "total": 4,
+        "first_pr_at": "2026-07-01T11:36:35Z",
+        "last_pr_at": "2026-07-21T12:50:04Z",
+        "success_rate": null
+      },
       "langgenius/dify": {
         "open": 8,
         "merged": 5,
@@ -19,15 +28,6 @@
         "first_pr_at": "2026-06-27T16:31:31Z",
         "last_pr_at": "2026-07-21T11:48:37Z",
         "success_rate": 100.0
-      },
-      "browser-use/browser-use": {
-        "open": 3,
-        "merged": 0,
-        "closed": 0,
-        "total": 3,
-        "first_pr_at": "2026-07-01T11:36:35Z",
-        "last_pr_at": "2026-07-21T11:23:06Z",
-        "success_rate": null
       },
       "ComposioHQ/composio": {
         "open": 5,
@@ -267,18 +267,18 @@
         "closed": 2
       },
       "2026-07-21": {
-        "created": 6,
+        "created": 7,
         "merged": 1,
         "closed": 0
       }
     },
     "activity": {
-      "recent_7d": 79,
-      "recent_30d": 99,
-      "recent_90d": 99
+      "recent_7d": 80,
+      "recent_30d": 100,
+      "recent_90d": 100
     },
     "open_pr_aging": {
-      "avg_days": 6.0,
+      "avg_days": 5.9,
       "oldest_days": 23
     },
     "merge_speed": {
@@ -286,8 +286,8 @@
       "sample_size": 8
     },
     "open_code_delta": {
-      "additions": 6236,
-      "deletions": 2588
+      "additions": 6273,
+      "deletions": 2592
     },
     "weekly": {
       "2025-W01": {
@@ -303,11 +303,40 @@
         "created": 61
       },
       "2026-W30": {
-        "created": 18
+        "created": 19
       }
     }
   },
   "prs": [
+    {
+      "repo": "browser-use/browser-use",
+      "repo_short": "browser-use",
+      "repo_owner": "browser-use",
+      "number": 5265,
+      "title": "fix(utils): rank .devN releases below pre-releases in version-check fallback",
+      "url": "https://github.com/browser-use/browser-use/pull/5265",
+      "state": "open",
+      "created_at": "2026-07-21T12:50:04Z",
+      "closed_at": null,
+      "updated_at": "2026-07-21T12:50:41Z",
+      "needs_action": true,
+      "action_reasons": [
+        "❌ CI 失败: code-style, type-checker"
+      ],
+      "action_priority": "medium",
+      "merge_state": "BLOCKED",
+      "review_decision": "",
+      "is_draft": false,
+      "additions": 37,
+      "deletions": 4,
+      "changed_files": 2,
+      "last_comment": null,
+      "last_review": null,
+      "failed_checks": [
+        "code-style",
+        "type-checker"
+      ]
+    },
     {
       "repo": "langgenius/dify",
       "repo_short": "dify",
@@ -528,7 +557,7 @@
         "💬 有未回复评论 (by @alt-glitch)"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 12,
@@ -582,7 +611,7 @@
         "💬 有未回复评论 (by @alt-glitch)"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 49,
@@ -780,7 +809,7 @@
         "💬 有未回复评论 (by @teknium1)"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 297,
@@ -1381,9 +1410,11 @@
       "created_at": "2026-07-15T02:43:00Z",
       "closed_at": null,
       "updated_at": "2026-07-21T04:39:33Z",
-      "needs_action": false,
-      "action_reasons": [],
-      "action_priority": "low",
+      "needs_action": true,
+      "action_reasons": [
+        "📝 @cgalvan 请求修改"
+      ],
+      "action_priority": "high",
       "merge_state": "BLOCKED",
       "review_decision": "CHANGES_REQUESTED",
       "is_draft": false,
@@ -1391,7 +1422,12 @@
       "deletions": 7,
       "changed_files": 2,
       "last_comment": null,
-      "last_review": null,
+      "last_review": {
+        "user": "cgalvan",
+        "state": "CHANGES_REQUESTED",
+        "at": "2026-07-15T17:15:39Z",
+        "body": ""
+      },
       "failed_checks": []
     },
     {
@@ -1469,7 +1505,7 @@
         "⏳ 等待 review 已 19 天，可考虑 ping"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 8,
