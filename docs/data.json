@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T13:06:36.764566+00:00",
+  "generated_at": "2026-07-21T13:36:43.845412+00:00",
   "author": "sergioperezcheco",
   "summary": {
     "total": 102,
@@ -278,7 +278,7 @@
       "recent_90d": 100
     },
     "open_pr_aging": {
-      "avg_days": 5.9,
+      "avg_days": 6.0,
       "oldest_days": 23
     },
     "merge_speed": {
@@ -318,7 +318,7 @@
       "state": "open",
       "created_at": "2026-07-21T12:50:04Z",
       "closed_at": null,
-      "updated_at": "2026-07-21T12:50:41Z",
+      "updated_at": "2026-07-21T13:12:49Z",
       "needs_action": true,
       "action_reasons": [
         "❌ CI 失败: code-style, type-checker"
@@ -1585,7 +1585,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 167,
@@ -1638,7 +1638,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 27,
@@ -1669,7 +1669,7 @@
         "💬 有未回复评论 (by @teknium1)"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 1,
