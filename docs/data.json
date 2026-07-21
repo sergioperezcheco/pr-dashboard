@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T12:07:21.920886+00:00",
+  "generated_at": "2026-07-21T12:34:19.417909+00:00",
   "author": "sergioperezcheco",
   "summary": {
     "total": 101,
@@ -8,8 +8,8 @@
     "closed": 39,
     "merge_rate": 7.9,
     "repo_count": 22,
-    "needs_action_count": 15,
-    "high_priority_count": 2,
+    "needs_action_count": 14,
+    "high_priority_count": 1,
     "repo_stats": {
       "langgenius/dify": {
         "open": 8,
@@ -528,7 +528,7 @@
         "💬 有未回复评论 (by @alt-glitch)"
       ],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "",
       "is_draft": false,
       "additions": 12,
@@ -582,7 +582,7 @@
         "💬 有未回复评论 (by @alt-glitch)"
       ],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "",
       "is_draft": false,
       "additions": 49,
@@ -610,7 +610,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 135,
@@ -634,7 +634,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 141,
@@ -658,7 +658,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 39,
@@ -682,7 +682,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 20,
@@ -706,7 +706,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 1,
@@ -780,7 +780,7 @@
         "💬 有未回复评论 (by @teknium1)"
       ],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "",
       "is_draft": false,
       "additions": 297,
@@ -1254,7 +1254,7 @@
         "💬 有未回复评论 (by @krajorama)"
       ],
       "action_priority": "medium",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 50,
@@ -1381,11 +1381,9 @@
       "created_at": "2026-07-15T02:43:00Z",
       "closed_at": null,
       "updated_at": "2026-07-21T04:39:33Z",
-      "needs_action": true,
-      "action_reasons": [
-        "📝 @cgalvan 请求修改"
-      ],
-      "action_priority": "high",
+      "needs_action": false,
+      "action_reasons": [],
+      "action_priority": "low",
       "merge_state": "BLOCKED",
       "review_decision": "CHANGES_REQUESTED",
       "is_draft": false,
@@ -1393,12 +1391,7 @@
       "deletions": 7,
       "changed_files": 2,
       "last_comment": null,
-      "last_review": {
-        "user": "cgalvan",
-        "state": "CHANGES_REQUESTED",
-        "at": "2026-07-15T17:15:39Z",
-        "body": ""
-      },
+      "last_review": null,
       "failed_checks": []
     },
     {
@@ -1556,7 +1549,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "",
       "is_draft": false,
       "additions": 167,
@@ -1609,7 +1602,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "",
       "is_draft": false,
       "additions": 27,
@@ -1640,7 +1633,7 @@
         "💬 有未回复评论 (by @teknium1)"
       ],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "",
       "is_draft": false,
       "additions": 1,
