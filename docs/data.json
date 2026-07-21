@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T01:06:29.091724+00:00",
+  "generated_at": "2026-07-21T01:38:59.087090+00:00",
   "author": "sergioperezcheco",
   "summary": {
     "total": 96,
@@ -8,7 +8,7 @@
     "closed": 39,
     "merge_rate": 7.3,
     "repo_count": 22,
-    "needs_action_count": 16,
+    "needs_action_count": 15,
     "high_priority_count": 2,
     "repo_stats": {
       "langgenius/dify": {
@@ -426,7 +426,7 @@
         "💬 有未回复评论 (by @alt-glitch)"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 12,
@@ -480,7 +480,7 @@
         "💬 有未回复评论 (by @alt-glitch)"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 49,
@@ -683,7 +683,7 @@
         "💬 有未回复评论 (by @teknium1)"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 297,
@@ -767,7 +767,7 @@
         "💬 有未回复评论 (by @dsfaccini)"
       ],
       "action_priority": "medium",
-      "merge_state": "CLEAN",
+      "merge_state": "UNKNOWN",
       "review_decision": "CHANGES_REQUESTED",
       "is_draft": false,
       "additions": 12,
@@ -1227,13 +1227,11 @@
       "state": "open",
       "created_at": "2026-07-15T02:43:16Z",
       "closed_at": null,
-      "updated_at": "2026-07-20T09:10:16Z",
-      "needs_action": true,
-      "action_reasons": [
-        "📉 分支落后 main，需要 rebase"
-      ],
-      "action_priority": "medium",
-      "merge_state": "BEHIND",
+      "updated_at": "2026-07-21T01:11:47Z",
+      "needs_action": false,
+      "action_reasons": [],
+      "action_priority": "low",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 1,
@@ -1253,14 +1251,13 @@
       "state": "open",
       "created_at": "2026-07-15T02:43:12Z",
       "closed_at": null,
-      "updated_at": "2026-07-20T09:09:43Z",
+      "updated_at": "2026-07-21T01:12:24Z",
       "needs_action": true,
       "action_reasons": [
-        "📉 分支落后 main，需要 rebase",
         "💬 有未回复评论 (by @prajwalendra)"
       ],
       "action_priority": "medium",
-      "merge_state": "BEHIND",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 50,
@@ -1284,14 +1281,13 @@
       "state": "open",
       "created_at": "2026-07-15T02:43:00Z",
       "closed_at": null,
-      "updated_at": "2026-07-20T13:43:26Z",
+      "updated_at": "2026-07-21T01:10:33Z",
       "needs_action": true,
       "action_reasons": [
-        "📝 @cgalvan 请求修改",
-        "📉 分支落后 main，需要 rebase"
+        "📝 @cgalvan 请求修改"
       ],
       "action_priority": "high",
-      "merge_state": "BEHIND",
+      "merge_state": "BLOCKED",
       "review_decision": "CHANGES_REQUESTED",
       "is_draft": false,
       "additions": 12,
@@ -1461,7 +1457,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 167,
@@ -1514,7 +1510,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 27,
@@ -1545,7 +1541,7 @@
         "💬 有未回复评论 (by @teknium1)"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 1,
