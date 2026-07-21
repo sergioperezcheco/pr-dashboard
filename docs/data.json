@@ -1,16 +1,25 @@
 {
-  "generated_at": "2026-07-21T09:37:24.642744+00:00",
+  "generated_at": "2026-07-21T10:04:35.265017+00:00",
   "author": "sergioperezcheco",
   "summary": {
-    "total": 96,
-    "open": 49,
+    "total": 97,
+    "open": 50,
     "merged": 8,
     "closed": 39,
-    "merge_rate": 8.3,
+    "merge_rate": 8.2,
     "repo_count": 22,
     "needs_action_count": 14,
     "high_priority_count": 2,
     "repo_stats": {
+      "huggingface/huggingface_hub": {
+        "open": 2,
+        "merged": 0,
+        "closed": 3,
+        "total": 5,
+        "first_pr_at": "2026-07-17T09:00:38Z",
+        "last_pr_at": "2026-07-21T09:51:33Z",
+        "success_rate": 0.0
+      },
       "langgenius/dify": {
         "open": 7,
         "merged": 5,
@@ -28,15 +37,6 @@
         "first_pr_at": "2026-07-01T11:36:35Z",
         "last_pr_at": "2026-07-20T13:16:57Z",
         "success_rate": null
-      },
-      "huggingface/huggingface_hub": {
-        "open": 1,
-        "merged": 0,
-        "closed": 3,
-        "total": 4,
-        "first_pr_at": "2026-07-17T09:00:38Z",
-        "last_pr_at": "2026-07-20T12:46:06Z",
-        "success_rate": 0.0
       },
       "NousResearch/hermes-agent": {
         "open": 6,
@@ -267,18 +267,18 @@
         "closed": 2
       },
       "2026-07-21": {
-        "created": 1,
+        "created": 2,
         "merged": 1,
         "closed": 0
       }
     },
     "activity": {
-      "recent_7d": 74,
-      "recent_30d": 94,
-      "recent_90d": 94
+      "recent_7d": 75,
+      "recent_30d": 95,
+      "recent_90d": 95
     },
     "open_pr_aging": {
-      "avg_days": 6.5,
+      "avg_days": 6.4,
       "oldest_days": 23
     },
     "merge_speed": {
@@ -286,8 +286,8 @@
       "sample_size": 8
     },
     "open_code_delta": {
-      "additions": 5855,
-      "deletions": 2577
+      "additions": 5930,
+      "deletions": 2581
     },
     "weekly": {
       "2025-W01": {
@@ -303,11 +303,35 @@
         "created": 61
       },
       "2026-W30": {
-        "created": 13
+        "created": 14
       }
     }
   },
   "prs": [
+    {
+      "repo": "huggingface/huggingface_hub",
+      "repo_short": "huggingface_hub",
+      "repo_owner": "huggingface",
+      "number": 4557,
+      "title": "fix(cli/jobs): correct cell truncation when terminal-fit loop compresses columns below width 3",
+      "url": "https://github.com/huggingface/huggingface_hub/pull/4557",
+      "state": "open",
+      "created_at": "2026-07-21T09:51:33Z",
+      "closed_at": null,
+      "updated_at": "2026-07-21T09:51:41Z",
+      "needs_action": false,
+      "action_reasons": [],
+      "action_priority": "low",
+      "merge_state": "BLOCKED",
+      "review_decision": "REVIEW_REQUIRED",
+      "is_draft": false,
+      "additions": 75,
+      "deletions": 4,
+      "changed_files": 2,
+      "last_comment": null,
+      "last_review": null,
+      "failed_checks": []
+    },
     {
       "repo": "langgenius/dify",
       "repo_short": "dify",
@@ -322,7 +346,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 5,
@@ -484,7 +508,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 135,
@@ -508,7 +532,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 141,
@@ -532,7 +556,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 39,
@@ -556,7 +580,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 20,
@@ -580,7 +604,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 1,
@@ -1122,7 +1146,7 @@
       "state": "open",
       "created_at": "2026-07-17T21:28:15Z",
       "closed_at": null,
-      "updated_at": "2026-07-21T07:59:59Z",
+      "updated_at": "2026-07-21T09:41:58Z",
       "needs_action": true,
       "action_reasons": [
         "💬 有未回复评论 (by @krajorama)"
