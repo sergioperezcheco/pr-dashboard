@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-21T10:04:35.265017+00:00",
+  "generated_at": "2026-07-21T10:34:44.962831+00:00",
   "author": "sergioperezcheco",
   "summary": {
-    "total": 97,
-    "open": 50,
+    "total": 98,
+    "open": 51,
     "merged": 8,
     "closed": 39,
     "merge_rate": 8.2,
@@ -11,6 +11,15 @@
     "needs_action_count": 14,
     "high_priority_count": 2,
     "repo_stats": {
+      "NousResearch/hermes-agent": {
+        "open": 7,
+        "merged": 0,
+        "closed": 3,
+        "total": 10,
+        "first_pr_at": "2026-06-27T16:55:41Z",
+        "last_pr_at": "2026-07-21T10:28:19Z",
+        "success_rate": 0.0
+      },
       "huggingface/huggingface_hub": {
         "open": 2,
         "merged": 0,
@@ -37,15 +46,6 @@
         "first_pr_at": "2026-07-01T11:36:35Z",
         "last_pr_at": "2026-07-20T13:16:57Z",
         "success_rate": null
-      },
-      "NousResearch/hermes-agent": {
-        "open": 6,
-        "merged": 0,
-        "closed": 3,
-        "total": 9,
-        "first_pr_at": "2026-06-27T16:55:41Z",
-        "last_pr_at": "2026-07-20T11:52:57Z",
-        "success_rate": 0.0
       },
       "ComposioHQ/composio": {
         "open": 4,
@@ -267,18 +267,18 @@
         "closed": 2
       },
       "2026-07-21": {
-        "created": 2,
+        "created": 3,
         "merged": 1,
         "closed": 0
       }
     },
     "activity": {
-      "recent_7d": 75,
-      "recent_30d": 95,
-      "recent_90d": 95
+      "recent_7d": 76,
+      "recent_30d": 96,
+      "recent_90d": 96
     },
     "open_pr_aging": {
-      "avg_days": 6.4,
+      "avg_days": 6.3,
       "oldest_days": 23
     },
     "merge_speed": {
@@ -286,8 +286,8 @@
       "sample_size": 8
     },
     "open_code_delta": {
-      "additions": 5930,
-      "deletions": 2581
+      "additions": 6055,
+      "deletions": 2582
     },
     "weekly": {
       "2025-W01": {
@@ -303,11 +303,35 @@
         "created": 61
       },
       "2026-W30": {
-        "created": 14
+        "created": 15
       }
     }
   },
   "prs": [
+    {
+      "repo": "NousResearch/hermes-agent",
+      "repo_short": "hermes-agent",
+      "repo_owner": "NousResearch",
+      "number": 68551,
+      "title": "fix(models): drop unavailable models from probe_api_models catalog",
+      "url": "https://github.com/NousResearch/hermes-agent/pull/68551",
+      "state": "open",
+      "created_at": "2026-07-21T10:28:19Z",
+      "closed_at": null,
+      "updated_at": "2026-07-21T10:28:19Z",
+      "needs_action": false,
+      "action_reasons": [],
+      "action_priority": "low",
+      "merge_state": "BLOCKED",
+      "review_decision": "",
+      "is_draft": false,
+      "additions": 125,
+      "deletions": 1,
+      "changed_files": 2,
+      "last_comment": null,
+      "last_review": null,
+      "failed_checks": []
+    },
     {
       "repo": "huggingface/huggingface_hub",
       "repo_short": "huggingface_hub",
@@ -346,7 +370,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 5,
@@ -426,7 +450,7 @@
         "💬 有未回复评论 (by @alt-glitch)"
       ],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "",
       "is_draft": false,
       "additions": 12,
@@ -480,7 +504,7 @@
         "💬 有未回复评论 (by @alt-glitch)"
       ],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "",
       "is_draft": false,
       "additions": 49,
@@ -508,7 +532,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 135,
@@ -532,7 +556,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 141,
@@ -556,7 +580,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 39,
@@ -580,7 +604,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 20,
@@ -604,7 +628,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 1,
@@ -678,7 +702,7 @@
         "💬 有未回复评论 (by @teknium1)"
       ],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "",
       "is_draft": false,
       "additions": 297,
@@ -1454,7 +1478,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "",
       "is_draft": false,
       "additions": 167,
@@ -1507,7 +1531,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "",
       "is_draft": false,
       "additions": 27,
@@ -1538,7 +1562,7 @@
         "💬 有未回复评论 (by @teknium1)"
       ],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "",
       "is_draft": false,
       "additions": 1,
