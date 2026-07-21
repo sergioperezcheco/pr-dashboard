@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T05:39:31.514626+00:00",
+  "generated_at": "2026-07-21T06:07:45.023067+00:00",
   "author": "sergioperezcheco",
   "summary": {
     "total": 96,
@@ -1433,7 +1433,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "",
       "is_draft": false,
       "additions": 167,
@@ -1486,14 +1486,19 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "",
       "is_draft": false,
       "additions": 27,
       "deletions": 1,
       "changed_files": 1,
       "last_comment": null,
-      "last_review": null,
+      "last_review": {
+        "user": "teknium1",
+        "state": "COMMENTED",
+        "at": "2026-07-15T06:33:25Z",
+        "body": "<!-- hermes-sweeper:review=53738 -->\n<!-- hermes-sweeper:review-verdict=keep_open salvageability=medium -->\nThanks for addressing the startup interrupt path. The underlying leak is still present on cu"
+      },
       "failed_checks": []
     },
     {
@@ -1512,7 +1517,7 @@
         "💬 有未回复评论 (by @teknium1)"
       ],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "",
       "is_draft": false,
       "additions": 1,
