@@ -1,16 +1,25 @@
 {
-  "generated_at": "2026-07-22T11:37:55.697860+00:00",
+  "generated_at": "2026-07-22T12:12:32.553410+00:00",
   "author": "sergioperezcheco",
   "summary": {
-    "total": 111,
-    "open": 61,
+    "total": 112,
+    "open": 62,
     "merged": 8,
     "closed": 42,
-    "merge_rate": 7.2,
+    "merge_rate": 7.1,
     "repo_count": 23,
-    "needs_action_count": 15,
+    "needs_action_count": 16,
     "high_priority_count": 2,
     "repo_stats": {
+      "awslabs/mcp": {
+        "open": 8,
+        "merged": 0,
+        "closed": 0,
+        "total": 8,
+        "first_pr_at": "2026-07-15T02:43:00Z",
+        "last_pr_at": "2026-07-22T11:42:06Z",
+        "success_rate": null
+      },
       "langgenius/dify": {
         "open": 13,
         "merged": 5,
@@ -54,15 +63,6 @@
         "total": 5,
         "first_pr_at": "2026-07-17T07:30:20Z",
         "last_pr_at": "2026-07-21T10:41:44Z",
-        "success_rate": null
-      },
-      "awslabs/mcp": {
-        "open": 7,
-        "merged": 0,
-        "closed": 0,
-        "total": 7,
-        "first_pr_at": "2026-07-15T02:43:00Z",
-        "last_pr_at": "2026-07-19T13:19:01Z",
         "success_rate": null
       },
       "trufflesecurity/trufflehog": {
@@ -281,15 +281,15 @@
         "closed": 2
       },
       "2026-07-22": {
-        "created": 8,
+        "created": 9,
         "merged": 0,
         "closed": 1
       }
     },
     "activity": {
-      "recent_7d": 89,
-      "recent_30d": 109,
-      "recent_90d": 109
+      "recent_7d": 90,
+      "recent_30d": 110,
+      "recent_90d": 110
     },
     "open_pr_aging": {
       "avg_days": 6.1,
@@ -300,8 +300,8 @@
       "sample_size": 8
     },
     "open_code_delta": {
-      "additions": 6512,
-      "deletions": 2597
+      "additions": 6616,
+      "deletions": 2605
     },
     "weekly": {
       "2025-W01": {
@@ -317,11 +317,39 @@
         "created": 61
       },
       "2026-W30": {
-        "created": 28
+        "created": 29
       }
     }
   },
   "prs": [
+    {
+      "repo": "awslabs/mcp",
+      "repo_short": "mcp",
+      "repo_owner": "awslabs",
+      "number": 4314,
+      "title": "fix(aws-network-mcp-server): skip inaccessible regions in find_ip_address all_regions search",
+      "url": "https://github.com/awslabs/mcp/pull/4314",
+      "state": "open",
+      "created_at": "2026-07-22T11:42:06Z",
+      "closed_at": null,
+      "updated_at": "2026-07-22T11:42:08Z",
+      "needs_action": true,
+      "action_reasons": [
+        "❌ CI 失败: Require Contributor Statement"
+      ],
+      "action_priority": "medium",
+      "merge_state": "BLOCKED",
+      "review_decision": "REVIEW_REQUIRED",
+      "is_draft": false,
+      "additions": 104,
+      "deletions": 8,
+      "changed_files": 2,
+      "last_comment": null,
+      "last_review": null,
+      "failed_checks": [
+        "Require Contributor Statement"
+      ]
+    },
     {
       "repo": "langgenius/dify",
       "repo_short": "dify",
@@ -437,7 +465,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 2,
@@ -1019,7 +1047,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 29,
@@ -1169,7 +1197,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 25,
@@ -1409,7 +1437,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 33,
@@ -1435,7 +1463,7 @@
         "💬 有未回复评论 (by @krajorama)"
       ],
       "action_priority": "medium",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 50,
@@ -1463,7 +1491,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 4,
@@ -1656,7 +1684,7 @@
         "⏳ 等待 review 已 20 天，可考虑 ping"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 8,
