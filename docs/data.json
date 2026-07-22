@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-07-22T11:07:00.147343+00:00",
+  "generated_at": "2026-07-22T11:37:55.697860+00:00",
   "author": "sergioperezcheco",
   "summary": {
-    "total": 110,
-    "open": 60,
+    "total": 111,
+    "open": 61,
     "merged": 8,
     "closed": 42,
-    "merge_rate": 7.3,
+    "merge_rate": 7.2,
     "repo_count": 23,
     "needs_action_count": 15,
     "high_priority_count": 2,
     "repo_stats": {
       "langgenius/dify": {
-        "open": 12,
+        "open": 13,
         "merged": 5,
         "closed": 0,
-        "total": 17,
+        "total": 18,
         "first_pr_at": "2026-06-27T16:31:31Z",
-        "last_pr_at": "2026-07-22T10:17:30Z",
+        "last_pr_at": "2026-07-22T11:18:53Z",
         "success_rate": 100.0
       },
       "NousResearch/hermes-agent": {
@@ -281,18 +281,18 @@
         "closed": 2
       },
       "2026-07-22": {
-        "created": 7,
+        "created": 8,
         "merged": 0,
         "closed": 1
       }
     },
     "activity": {
-      "recent_7d": 88,
-      "recent_30d": 108,
-      "recent_90d": 108
+      "recent_7d": 89,
+      "recent_30d": 109,
+      "recent_90d": 109
     },
     "open_pr_aging": {
-      "avg_days": 6.2,
+      "avg_days": 6.1,
       "oldest_days": 24
     },
     "merge_speed": {
@@ -300,8 +300,8 @@
       "sample_size": 8
     },
     "open_code_delta": {
-      "additions": 6480,
-      "deletions": 2595
+      "additions": 6512,
+      "deletions": 2597
     },
     "weekly": {
       "2025-W01": {
@@ -317,11 +317,35 @@
         "created": 61
       },
       "2026-W30": {
-        "created": 27
+        "created": 28
       }
     }
   },
   "prs": [
+    {
+      "repo": "langgenius/dify",
+      "repo_short": "dify",
+      "repo_owner": "langgenius",
+      "number": 39414,
+      "title": "fix(workflow): reset cleared variable selector to constant/null",
+      "url": "https://github.com/langgenius/dify/pull/39414",
+      "state": "open",
+      "created_at": "2026-07-22T11:18:53Z",
+      "closed_at": null,
+      "updated_at": "2026-07-22T11:19:39Z",
+      "needs_action": false,
+      "action_reasons": [],
+      "action_priority": "low",
+      "merge_state": "BLOCKED",
+      "review_decision": "REVIEW_REQUIRED",
+      "is_draft": false,
+      "additions": 30,
+      "deletions": 1,
+      "changed_files": 2,
+      "last_comment": null,
+      "last_review": null,
+      "failed_checks": []
+    },
     {
       "repo": "langgenius/dify",
       "repo_short": "dify",
@@ -413,7 +437,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 2,
@@ -995,7 +1019,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 29,
@@ -1021,7 +1045,7 @@
         "💬 有未回复评论 (by @dsfaccini)"
       ],
       "action_priority": "medium",
-      "merge_state": "UNKNOWN",
+      "merge_state": "CLEAN",
       "review_decision": "CHANGES_REQUESTED",
       "is_draft": false,
       "additions": 14,
@@ -1145,7 +1169,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 25,
@@ -1385,7 +1409,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 33,
@@ -1439,7 +1463,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 4,
@@ -1568,19 +1592,19 @@
       "state": "open",
       "created_at": "2026-07-01T15:57:08Z",
       "closed_at": null,
-      "updated_at": "2026-07-22T00:42:33Z",
+      "updated_at": "2026-07-22T11:12:42Z",
       "needs_action": true,
       "action_reasons": [
         "📝 @hperl 请求修改",
-        "❌ CI 失败: scanners, format"
+        "❌ CI 失败: scanners"
       ],
       "action_priority": "high",
       "merge_state": "BLOCKED",
       "review_decision": "CHANGES_REQUESTED",
       "is_draft": false,
-      "additions": 3,
-      "deletions": 9,
-      "changed_files": 2,
+      "additions": 5,
+      "deletions": 10,
+      "changed_files": 3,
       "last_comment": null,
       "last_review": {
         "user": "hperl",
@@ -1589,8 +1613,7 @@
         "body": ""
       },
       "failed_checks": [
-        "scanners",
-        "format"
+        "scanners"
       ]
     },
     {
@@ -1633,7 +1656,7 @@
         "⏳ 等待 review 已 20 天，可考虑 ping"
       ],
       "action_priority": "low",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 8,
@@ -1689,7 +1712,7 @@
         "⏳ 等待 review 已 24 天，可考虑 ping"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 2,
