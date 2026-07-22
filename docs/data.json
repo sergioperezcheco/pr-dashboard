@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T05:36:22.012044+00:00",
+  "generated_at": "2026-07-22T06:08:48.705201+00:00",
   "author": "sergioperezcheco",
   "summary": {
     "total": 109,
@@ -292,7 +292,7 @@
       "recent_90d": 107
     },
     "open_pr_aging": {
-      "avg_days": 6.1,
+      "avg_days": 6.2,
       "oldest_days": 24
     },
     "merge_speed": {
@@ -332,7 +332,7 @@
       "state": "open",
       "created_at": "2026-07-22T05:14:22Z",
       "closed_at": null,
-      "updated_at": "2026-07-22T05:17:16Z",
+      "updated_at": "2026-07-22T05:41:08Z",
       "needs_action": true,
       "action_reasons": [
         "❌ CI 失败: Web Full-Stack E2E, Run Web Full-Stack E2E / Web Full-Stack E2E"
@@ -361,7 +361,7 @@
       "state": "open",
       "created_at": "2026-07-22T04:43:47Z",
       "closed_at": null,
-      "updated_at": "2026-07-22T04:43:47Z",
+      "updated_at": "2026-07-22T06:02:12Z",
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
@@ -1483,7 +1483,7 @@
       "state": "open",
       "created_at": "2026-07-15T02:43:12Z",
       "closed_at": null,
-      "updated_at": "2026-07-22T00:44:47Z",
+      "updated_at": "2026-07-22T05:39:47Z",
       "needs_action": true,
       "action_reasons": [
         "💬 有未回复评论 (by @prajwalendra)"
