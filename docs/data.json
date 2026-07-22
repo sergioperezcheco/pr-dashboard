@@ -1,16 +1,25 @@
 {
-  "generated_at": "2026-07-22T01:36:34.578255+00:00",
+  "generated_at": "2026-07-22T02:06:42.148165+00:00",
   "author": "sergioperezcheco",
   "summary": {
-    "total": 105,
-    "open": 56,
+    "total": 106,
+    "open": 57,
     "merged": 8,
     "closed": 41,
-    "merge_rate": 7.6,
+    "merge_rate": 7.5,
     "repo_count": 22,
     "needs_action_count": 14,
     "high_priority_count": 2,
     "repo_stats": {
+      "huggingface/diffusers": {
+        "open": 7,
+        "merged": 0,
+        "closed": 1,
+        "total": 8,
+        "first_pr_at": "2026-07-17T08:50:42Z",
+        "last_pr_at": "2026-07-22T01:42:34Z",
+        "success_rate": 0.0
+      },
       "langgenius/dify": {
         "open": 10,
         "merged": 5,
@@ -64,15 +73,6 @@
         "first_pr_at": "2026-06-27T15:42:43Z",
         "last_pr_at": "2026-07-19T11:55:55Z",
         "success_rate": null
-      },
-      "huggingface/diffusers": {
-        "open": 6,
-        "merged": 0,
-        "closed": 1,
-        "total": 7,
-        "first_pr_at": "2026-07-17T08:50:42Z",
-        "last_pr_at": "2026-07-19T03:49:19Z",
-        "success_rate": 0.0
       },
       "pydantic/pydantic-ai": {
         "open": 1,
@@ -272,18 +272,18 @@
         "closed": 2
       },
       "2026-07-22": {
-        "created": 2,
+        "created": 3,
         "merged": 0,
         "closed": 0
       }
     },
     "activity": {
-      "recent_7d": 83,
-      "recent_30d": 103,
-      "recent_90d": 103
+      "recent_7d": 84,
+      "recent_30d": 104,
+      "recent_90d": 104
     },
     "open_pr_aging": {
-      "avg_days": 6.2,
+      "avg_days": 6.1,
       "oldest_days": 24
     },
     "merge_speed": {
@@ -291,8 +291,8 @@
       "sample_size": 8
     },
     "open_code_delta": {
-      "additions": 6318,
-      "deletions": 2587
+      "additions": 6320,
+      "deletions": 2589
     },
     "weekly": {
       "2025-W01": {
@@ -308,11 +308,35 @@
         "created": 61
       },
       "2026-W30": {
-        "created": 22
+        "created": 23
       }
     }
   },
   "prs": [
+    {
+      "repo": "huggingface/diffusers",
+      "repo_short": "diffusers",
+      "repo_owner": "huggingface",
+      "number": 14266,
+      "title": "fix(ltx2): use actual video sequence length for dynamic timestep shift",
+      "url": "https://github.com/huggingface/diffusers/pull/14266",
+      "state": "open",
+      "created_at": "2026-07-22T01:42:34Z",
+      "closed_at": null,
+      "updated_at": "2026-07-22T01:42:47Z",
+      "needs_action": false,
+      "action_reasons": [],
+      "action_priority": "low",
+      "merge_state": "BLOCKED",
+      "review_decision": "REVIEW_REQUIRED",
+      "is_draft": false,
+      "additions": 2,
+      "deletions": 2,
+      "changed_files": 1,
+      "last_comment": null,
+      "last_review": null,
+      "failed_checks": []
+    },
     {
       "repo": "langgenius/dify",
       "repo_short": "dify",
@@ -911,7 +935,7 @@
         "💬 有未回复评论 (by @dsfaccini)"
       ],
       "action_priority": "medium",
-      "merge_state": "UNKNOWN",
+      "merge_state": "CLEAN",
       "review_decision": "CHANGES_REQUESTED",
       "is_draft": false,
       "additions": 12,
