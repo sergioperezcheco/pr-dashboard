@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-22T12:12:32.553410+00:00",
+  "generated_at": "2026-07-22T12:36:55.371876+00:00",
   "author": "sergioperezcheco",
   "summary": {
-    "total": 112,
-    "open": 62,
+    "total": 113,
+    "open": 63,
     "merged": 8,
     "closed": 42,
     "merge_rate": 7.1,
@@ -11,6 +11,15 @@
     "needs_action_count": 16,
     "high_priority_count": 2,
     "repo_stats": {
+      "grafana/grafana": {
+        "open": 1,
+        "merged": 0,
+        "closed": 1,
+        "total": 2,
+        "first_pr_at": "2026-07-22T04:23:27Z",
+        "last_pr_at": "2026-07-22T12:14:35Z",
+        "success_rate": 0.0
+      },
       "awslabs/mcp": {
         "open": 8,
         "merged": 0,
@@ -127,15 +136,6 @@
         "first_pr_at": "2026-06-28T04:51:24Z",
         "last_pr_at": "2026-06-28T04:51:24Z",
         "success_rate": null
-      },
-      "grafana/grafana": {
-        "open": 0,
-        "merged": 0,
-        "closed": 1,
-        "total": 1,
-        "first_pr_at": "2026-07-22T04:23:27Z",
-        "last_pr_at": "2026-07-22T04:23:27Z",
-        "success_rate": 0.0
       },
       "huggingface/huggingface_hub": {
         "open": 0,
@@ -281,18 +281,18 @@
         "closed": 2
       },
       "2026-07-22": {
-        "created": 9,
+        "created": 10,
         "merged": 0,
         "closed": 1
       }
     },
     "activity": {
-      "recent_7d": 90,
-      "recent_30d": 110,
-      "recent_90d": 110
+      "recent_7d": 91,
+      "recent_30d": 111,
+      "recent_90d": 111
     },
     "open_pr_aging": {
-      "avg_days": 6.1,
+      "avg_days": 6.0,
       "oldest_days": 24
     },
     "merge_speed": {
@@ -300,7 +300,7 @@
       "sample_size": 8
     },
     "open_code_delta": {
-      "additions": 6616,
+      "additions": 6650,
       "deletions": 2605
     },
     "weekly": {
@@ -317,11 +317,35 @@
         "created": 61
       },
       "2026-W30": {
-        "created": 29
+        "created": 30
       }
     }
   },
   "prs": [
+    {
+      "repo": "grafana/grafana",
+      "repo_short": "grafana",
+      "repo_owner": "grafana",
+      "number": 129008,
+      "title": "fix(transformations): pass null/undefined values through unchanged in formatString",
+      "url": "https://github.com/grafana/grafana/pull/129008",
+      "state": "open",
+      "created_at": "2026-07-22T12:14:35Z",
+      "closed_at": null,
+      "updated_at": "2026-07-22T12:17:06Z",
+      "needs_action": false,
+      "action_reasons": [],
+      "action_priority": "low",
+      "merge_state": "BLOCKED",
+      "review_decision": "REVIEW_REQUIRED",
+      "is_draft": false,
+      "additions": 34,
+      "deletions": 0,
+      "changed_files": 2,
+      "last_comment": null,
+      "last_review": null,
+      "failed_checks": []
+    },
     {
       "repo": "awslabs/mcp",
       "repo_short": "mcp",
@@ -1019,7 +1043,7 @@
         "💬 有未回复评论 (by @Dcsky777)"
       ],
       "action_priority": "medium",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 6,
@@ -1073,7 +1097,7 @@
         "💬 有未回复评论 (by @dsfaccini)"
       ],
       "action_priority": "medium",
-      "merge_state": "CLEAN",
+      "merge_state": "UNKNOWN",
       "review_decision": "CHANGES_REQUESTED",
       "is_draft": false,
       "additions": 14,
@@ -1627,7 +1651,7 @@
         "❌ CI 失败: scanners"
       ],
       "action_priority": "high",
-      "merge_state": "BLOCKED",
+      "merge_state": "UNKNOWN",
       "review_decision": "CHANGES_REQUESTED",
       "is_draft": false,
       "additions": 5,
@@ -1764,7 +1788,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 167,
@@ -1817,7 +1841,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 27,
@@ -1848,7 +1872,7 @@
         "💬 有未回复评论 (by @teknium1)"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 1,
