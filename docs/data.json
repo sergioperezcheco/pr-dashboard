@@ -1,16 +1,25 @@
 {
-  "generated_at": "2026-07-22T05:06:22.106119+00:00",
+  "generated_at": "2026-07-22T05:36:22.012044+00:00",
   "author": "sergioperezcheco",
   "summary": {
-    "total": 108,
-    "open": 58,
+    "total": 109,
+    "open": 59,
     "merged": 8,
     "closed": 42,
-    "merge_rate": 7.4,
+    "merge_rate": 7.3,
     "repo_count": 23,
-    "needs_action_count": 14,
+    "needs_action_count": 15,
     "high_priority_count": 2,
     "repo_stats": {
+      "langgenius/dify": {
+        "open": 11,
+        "merged": 5,
+        "closed": 0,
+        "total": 16,
+        "first_pr_at": "2026-06-27T16:31:31Z",
+        "last_pr_at": "2026-07-22T05:14:22Z",
+        "success_rate": 100.0
+      },
       "NousResearch/hermes-agent": {
         "open": 8,
         "merged": 0,
@@ -28,15 +37,6 @@
         "first_pr_at": "2026-07-17T08:50:42Z",
         "last_pr_at": "2026-07-22T01:42:34Z",
         "success_rate": 0.0
-      },
-      "langgenius/dify": {
-        "open": 10,
-        "merged": 5,
-        "closed": 0,
-        "total": 15,
-        "first_pr_at": "2026-06-27T16:31:31Z",
-        "last_pr_at": "2026-07-22T01:17:35Z",
-        "success_rate": 100.0
       },
       "browser-use/browser-use": {
         "open": 5,
@@ -281,18 +281,18 @@
         "closed": 2
       },
       "2026-07-22": {
-        "created": 5,
+        "created": 6,
         "merged": 0,
         "closed": 1
       }
     },
     "activity": {
-      "recent_7d": 86,
-      "recent_30d": 106,
-      "recent_90d": 106
+      "recent_7d": 87,
+      "recent_30d": 107,
+      "recent_90d": 107
     },
     "open_pr_aging": {
-      "avg_days": 6.2,
+      "avg_days": 6.1,
       "oldest_days": 24
     },
     "merge_speed": {
@@ -300,7 +300,7 @@
       "sample_size": 8
     },
     "open_code_delta": {
-      "additions": 6429,
+      "additions": 6454,
       "deletions": 2591
     },
     "weekly": {
@@ -317,11 +317,40 @@
         "created": 61
       },
       "2026-W30": {
-        "created": 25
+        "created": 26
       }
     }
   },
   "prs": [
+    {
+      "repo": "langgenius/dify",
+      "repo_short": "dify",
+      "repo_owner": "langgenius",
+      "number": 39396,
+      "title": "fix(service-api): map completion-messages rate limit to 429",
+      "url": "https://github.com/langgenius/dify/pull/39396",
+      "state": "open",
+      "created_at": "2026-07-22T05:14:22Z",
+      "closed_at": null,
+      "updated_at": "2026-07-22T05:17:16Z",
+      "needs_action": true,
+      "action_reasons": [
+        "❌ CI 失败: Web Full-Stack E2E, Run Web Full-Stack E2E / Web Full-Stack E2E"
+      ],
+      "action_priority": "medium",
+      "merge_state": "BLOCKED",
+      "review_decision": "REVIEW_REQUIRED",
+      "is_draft": false,
+      "additions": 25,
+      "deletions": 0,
+      "changed_files": 2,
+      "last_comment": null,
+      "last_review": null,
+      "failed_checks": [
+        "Web Full-Stack E2E",
+        "Run Web Full-Stack E2E / Web Full-Stack E2E"
+      ]
+    },
     {
       "repo": "NousResearch/hermes-agent",
       "repo_short": "hermes-agent",
@@ -336,7 +365,7 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 107,
@@ -554,7 +583,7 @@
         "💬 有未回复评论 (by @alt-glitch)"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 125,
@@ -632,7 +661,7 @@
         "💬 有未回复评论 (by @alt-glitch)"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 12,
@@ -686,7 +715,7 @@
         "💬 有未回复评论 (by @alt-glitch)"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 49,
@@ -884,7 +913,7 @@
         "💬 有未回复评论 (by @teknium1)"
       ],
       "action_priority": "low",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "",
       "is_draft": false,
       "additions": 297,
@@ -1358,7 +1387,7 @@
         "💬 有未回复评论 (by @krajorama)"
       ],
       "action_priority": "medium",
-      "merge_state": "UNKNOWN",
+      "merge_state": "BLOCKED",
       "review_decision": "REVIEW_REQUIRED",
       "is_draft": false,
       "additions": 50,
