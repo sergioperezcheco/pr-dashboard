@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T00:42:01.225717+00:00",
+  "generated_at": "2026-07-23T00:46:36.112907+00:00",
   "author": "sergioperezcheco",
   "summary": {
     "total": 115,
@@ -305,8 +305,8 @@
       "sample_size": 9
     },
     "open_code_delta": {
-      "additions": 6461,
-      "deletions": 2594
+      "additions": 6628,
+      "deletions": 2601
     },
     "weekly": {
       "2025-W01": {
@@ -1720,11 +1720,10 @@
       "updated_at": "2026-07-21T01:49:32Z",
       "needs_action": true,
       "action_reasons": [
-        "📉 分支落后 main，需要 rebase",
         "💬 有未回复评论 (by @itxaiohanglover)"
       ],
       "action_priority": "medium",
-      "merge_state": "BEHIND",
+      "merge_state": "UNKNOWN",
       "review_decision": "",
       "is_draft": false,
       "additions": 55,
@@ -1778,12 +1777,12 @@
       "needs_action": false,
       "action_reasons": [],
       "action_priority": "low",
-      "merge_state": null,
-      "review_decision": null,
+      "merge_state": "BLOCKED",
+      "review_decision": "",
       "is_draft": false,
-      "additions": null,
-      "deletions": null,
-      "changed_files": null,
+      "additions": 167,
+      "deletions": 7,
+      "changed_files": 4,
       "last_comment": null,
       "last_review": {
         "user": "tonydwb",
